@@ -2,6 +2,39 @@
 
 <html>
 <head>
+
+<style>
+	header {
+		font-size: 2em;
+		color: #134dab;
+		
+	}
+	
+	html {
+		background-image: linear-gradient(#ab0c1e, #ffffff, #208039);
+		background-repeat: no-repeat;
+		
+	}
+	
+	#main {
+		
+		
+	}
+	
+
+</style>
+	
+
+<script>
+	function sayHello(){
+	var hellos = document.getElementById("hello").innerHTML;
+	
+	document.getElementById("hello").innerHTML = hellos + "Hello World!!!<br>";
+	
+	}
+
+</script>
+
 	<meta charset="UTF-8">
 
 	<title>Hello World</title>	
@@ -12,5 +45,22 @@
 		Hello World!!!
 	</header>
 
+	<div id="main">
+		<input type="button" name="hello" value="Click to say 'hello' to the world" onclick="sayHello()">
+		<div id="hello">
+		</div>
+		
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
 </body>
+
 </html>
