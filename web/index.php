@@ -35,7 +35,7 @@
 		</div>
 	
 		<hr>
-		<span onclick="openNav()">&#9776;Navigation Menu</span>
+		<span onclick="openNav()">&#9776;Navigation</span>
 		<hr>
 		<div id="header">
 		
@@ -136,9 +136,9 @@
 			
 			
 		</div>
-
+		<hr>
 		<div id="footer">
-			<hr>
+			
 			<a href="index.php">Home</a>
 			<br>
 			<br>
