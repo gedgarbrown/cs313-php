@@ -57,7 +57,33 @@
 					<?php
 						date_default_timezone_set("America/Denver");
 						echo "Current Date: " . date("Y/m/d") . "<br>";
-						echo "Current Time: " . date("h:i:sa") . "<br>";
+						echo "Current Time: " . date("h:i:sa") . "<br> <br> <hr>;
+						
+						$x = rand(0, 5);
+						echo "Random Quote: ";
+						
+						switch ($x) {
+							case "0":
+								echo "Veni Vedi Vici. <br>";
+								break;
+							case "1":
+								echo "Quem espera sempre alcança. <br>";
+								break;	
+							case "2":
+								echo "He who doesn't have a dog hunts with a cat. <br>";
+								break;
+							case "3":
+								echo "The lady doth protest too much, methinks. <br>";
+								break;
+							case "4":
+								echo "Parisien, tête de chien, Parigot tête de veau. <br>";
+								break;
+							case "5":
+								echo "In diesen Heil'gen hallen kennt man die rache nicht. <br>";
+								break;
+						}
+						
+						echo "<br>";
 										
 					?>
 				</div>
@@ -70,16 +96,16 @@
 			<div class="row">	
 				<div class="col-2">&nbsp;
 				</div>
-				<div class="col-2">
+				<div class="col-3">
 					<figure>
-						<img src="images/me.jpg" alt="George Brown" height="50%" width="100%">
+						<img src="images/me.jpg" alt="George Brown"  width="100%">
 							<figcaption class="caption">
 								George Brown
 							</figcaption>
 					</figure>
 				</div>
 				
-				<div class="col-6">
+				<div class="col-5">
 					Hi!! I'm George Brown and I am taking CS313 this semester.  I have a BA in Linguistics from BYU but am currently studying a second degree in Software Engineering
 					at BYUI. I currently work in banking, but I am also a musician.  I am married with two boys.  I support Fluminense Football Club rather avidly and enjoy playing ball when
 					time permits.  I also enjoy backpacking and try to do at least one trip every year.
@@ -92,23 +118,48 @@
 			<div class="row">	
 				<div class="col-2">&nbsp;
 				</div>
-				<div class="col-2">
-					<figure>
-						<img src="images/me.jpg" alt="George Brown" height="50%" width="100%">
-							<figcaption class="caption">
-								George Brown
-							</figcaption>
-					</figure>
+				<div class="col-6">
+					This is one of my Cavaquinhos. The Cavaquinho is a guitar-like instrument originating from Portugal but used widely in Brazil to play Samba and Choro. This Cavaco is a Rozini RC20 ATN, 
+					it has a spruce top and walnut back and sides.  The traditional tuning for Cavaquinho is d-g-b-d.  However, another less common tuning is that of the mandolin, g-d-a-e.  Many of the famous recordings
+					the 70s and 80s were performed by Carlinhos do Cavaco who used the mandolin tuning.  He can be heard backing famous artists like Clara Nunes and Bezerra da Silva.
 				</div>
 				
-				<div class="col-6">
-					Hi!! I'm George Brown and I am taking CS313 this semester.  I have a BA in Linguistics from BYU but am currently studying a second degree in Software Engineering
-					at BYUI. I currently work in banking, but I am also a musician.  I am married with two boys.  I support Fluminense Football Club rather avidly and enjoy playing ball when
-					time permits.  I also enjoy backpacking and try to do at least one trip every year.
+				<div class="col-2">
+					<figure>
+						<img src="images/RoziniRC20ATN.jpg" alt="Cavaquinho"  width="100%">
+							<figcaption class="caption">
+								Cavaquinho Rozini RC20 ATN
+							</figcaption>
+					</figure>
 				</div>
 				<div class="col-2">&nbsp;
 				</div>
 			</div>
+			
+			<!-- Row 4 -->
+			<div class="row">	
+				<div class="col-2">&nbsp;
+				</div>
+				<div class="col-4">
+					<figure>
+						<img src="images/xire.png" alt="Xir"  width="100%">
+							<figcaption class="caption">
+								Xirê, November 15,16 2019
+							</figcaption>
+					</figure>
+				</div>
+				
+				<div class="col-4">
+				<br>
+					Currently I am involved in a project based on Afro-Brazilian cultural mythology.  Xirê is a mixture of western classical elements with rhythms and folklore from candomblé. 
+					All pieces in this program were written by me.  If you are in the Salt Lake area around November 15th and 16th this year come support me and satisfy your curiosity.  
+				</div>
+				<div class="col-2">&nbsp;
+				</div>
+			</div>
+			
+			
+			
 			
 		</div>
 
@@ -122,6 +173,5 @@
 	</div>
 </body>
 </html>
-
 
 
