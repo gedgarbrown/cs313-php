@@ -55,6 +55,7 @@
 				<div class="col-8">
 					
 					<?php
+						date_default_timezone_set("America/Denver");
 						echo "Current Date: " . date("Y/m/d") . "<br>";
 						echo "Current Time: " . date("h:i:sa") . "<br>";
 										
