@@ -57,34 +57,8 @@
 					<?php
 						date_default_timezone_set("America/Denver");
 						echo "Current Date: " . date("Y/m/d") . "<br>";
-						echo "Current Time: " . date("h:i:sa") . "<br> <br> <hr>;
-						
-						$x = rand(0, 5);
-						echo "Random Quote: ";
-						
-						switch ($x) {
-							case "0":
-								echo "Veni Vedi Vici. <br>";
-								break;
-							case "1":
-								echo "Quem espera sempre alcança. <br>";
-								break;	
-							case "2":
-								echo "He who doesn't have a dog hunts with a cat. <br>";
-								break;
-							case "3":
-								echo "The lady doth protest too much, methinks. <br>";
-								break;
-							case "4":
-								echo "Parisien, tête de chien, Parigot tête de veau. <br>";
-								break;
-							case "5":
-								echo "In diesen Heil'gen hallen kennt man die rache nicht. <br>";
-								break;
-						}
-						
-						echo "<br>";
-										
+						echo "Current Time: " . date("h:i:sa") . "<br> <br> <hr>";
+																
 					?>
 				</div>
 				
