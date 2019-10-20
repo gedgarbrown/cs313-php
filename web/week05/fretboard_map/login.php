@@ -74,10 +74,18 @@
 					$myUser->username = $post['username'];
 					$myUser->password = $post['password'];
 					
+					echo $myUser->username.'<br>';
+					echo $myUser->username.'<br>';
+					
 					$goodLogin = false;
 					
 					foreach ($db->query('SELECT username, password FROM users') as $row)
 					{
+						
+						echo $row['username'].'<br>';
+						echo $row['password'].'<br>';
+						
+						
 						if (($myUser->username == $row['username']) || ($myUser->password == $row['password'])) {
 							$goodLogin = true;
 						}
