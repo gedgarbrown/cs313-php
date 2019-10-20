@@ -75,7 +75,7 @@
 					$myUser->password = $post['password'];
 					
 					echo $myUser->username.'<br>';
-					echo $myUser->username.'<br>';
+					echo $myUser->password.'<br>';
 					
 					$goodLogin = false;
 					
