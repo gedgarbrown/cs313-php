@@ -86,13 +86,18 @@
 						echo $row['password'].'<br>';
 						
 						
-						if (($myUser->username == $row['username']) || ($myUser->password == $row['password'])) {
-							$goodLogin = true;
+						if ($myUser->username == $row['username']){
+								echo $goodLogin.'<br>';
+								
+								if ($myUser->password == $row['password']) {
+									echo $goodLogin.'<br>';
+									$goodLogin = true;
+								}
 						}
 					}						
 								
 						
-						
+						echo $goodLogin.'last<br>';
 						if($goodLogin == TRUE) {
 							
 							
