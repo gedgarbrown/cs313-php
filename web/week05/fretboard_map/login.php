@@ -68,19 +68,23 @@
 						public $username;
 						public $password;
 					}
+					$post =$_POST;
 					
 					$myUser = new User();
+					$myUser->username = $post['username'];
+					$myUser->password = $post['password'];
+					$goodLogin = false;
 					
 					foreach ($db->query('SELECT username, password FROM users') as $row)
 					{
-						$myUser->username = $row['username'];
-						$myUser->password = $row['password'];
-						echo '<br/>';
+						if (($myUser->username == $row['username']) || (($myUser->password == $row['password'])) {
+							$goodLogin = true;
+						}
 					}						
 								
-						$post =$_POST;
 						
-						if(($post['username'] == $myUser->username) || ($post['password'] == $myUser->password)) {
+						
+						if($goodLogin) {
 							
 							
 							echo 'Login Successful!!<br>';
