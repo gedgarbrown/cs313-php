@@ -77,12 +77,7 @@
 						echo 'Error!: ' . $ex->getMessage();
 						die();
 					}
-					
-					
-
-
-					}
-
+	
 					
 					foreach ($db->query('SELECT id, name FROM instruments') as $row)
 					{
@@ -135,11 +130,6 @@
 						die();
 					}
 					
-				
-
-
-					}
-
 					
 					foreach ($db->query('SELECT id, name FROM instruments') as $row)
 					{
@@ -248,12 +238,7 @@
 					}
 
 			
-
-					
-					
-					}
-
-					
+								
 					foreach ($db->query('SELECT id, name FROM instruments') as $row)
 					{
 						echo '<option value="'.$row["id"].'>'.$row["name"].'</option>';				
@@ -287,17 +272,8 @@
 						catch (PDOException $ex)
 					{
 
-						
 						echo 'Error!: ' . $ex->getMessage();
 						die();
-					}
-
-
-						echo 'Error!: ' . $ex->getMessage();
-						die();
-					}
-					
-					
 					}
 					
 
