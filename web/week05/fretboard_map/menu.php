@@ -85,7 +85,7 @@
 					
 					foreach ($db->query('SELECT id, name FROM instruments') as $row)
 					{
-						
+						echo $row["id"].' '.$row["name"].'<br>';
 						echo '<option value="'.$row["id"].'>'.$row["name"].'</option>';				
 						
 						
