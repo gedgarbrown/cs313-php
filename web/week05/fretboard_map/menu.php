@@ -79,6 +79,10 @@
 					}
 					
 					
+
+
+					}
+
 					
 					foreach ($db->query('SELECT id, name FROM instruments') as $row)
 					{
@@ -132,6 +136,10 @@
 					}
 					
 				
+
+
+					}
+
 					
 					foreach ($db->query('SELECT id, name FROM instruments') as $row)
 					{
@@ -238,7 +246,13 @@
 						echo 'Error!: ' . $ex->getMessage();
 						die();
 					}
+
 			
+
+					
+					
+					}
+
 					
 					foreach ($db->query('SELECT id, name FROM instruments') as $row)
 					{
@@ -272,10 +286,20 @@
 					}
 						catch (PDOException $ex)
 					{
+
 						
 						echo 'Error!: ' . $ex->getMessage();
 						die();
 					}
+
+
+						echo 'Error!: ' . $ex->getMessage();
+						die();
+					}
+					
+					
+					}
+					
 
 					foreach ($db->query('SELECT id, name FROM chords') as $row)
 					{
