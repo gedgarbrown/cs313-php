@@ -78,7 +78,7 @@
 					
 					foreach ($db->query('SELECT username, password FROM users') as $row)
 					{
-						if (($myUser->username == $row['username']) || (($myUser->password == $row['password'])) {
+						if (($myUser->username == $row['username']) || ($myUser->password == $row['password'])) {
 							$goodLogin = true;
 						}
 					}						
