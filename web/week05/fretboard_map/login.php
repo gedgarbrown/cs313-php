@@ -82,22 +82,22 @@
 					foreach ($db->query('SELECT username, password FROM users') as $row)
 					{
 						
-						echo $row['username'].'<br>';
-						echo $row['password'].'<br>';
+						//echo $row['username'].'<br>';
+						//echo $row['password'].'<br>';
 						
 						
 						if ($myUser->username == $row['username']){
-								echo $goodLogin.'<br>';
+								//echo $goodLogin.'<br>';
 								
 								if ($myUser->password == $row['password']) {
-									echo $goodLogin.'<br>';
+									//echo $goodLogin.'<br>';
 									$goodLogin = true;
 								}
 						}
 					}						
 								
 						
-						echo $goodLogin.'last<br>';
+						//echo $goodLogin.'last<br>';
 						if($goodLogin == TRUE) {
 							
 							
