@@ -73,6 +73,7 @@
 					$myUser = new User();
 					$myUser->username = $post['username'];
 					$myUser->password = $post['password'];
+					
 					$goodLogin = false;
 					
 					foreach ($db->query('SELECT username, password FROM users') as $row)
@@ -84,7 +85,7 @@
 								
 						
 						
-						if($goodLogin) {
+						if($goodLogin == TRUE) {
 							
 							
 							echo 'Login Successful!!<br>';
