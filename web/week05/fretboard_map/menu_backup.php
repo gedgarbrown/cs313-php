@@ -55,9 +55,8 @@
 					<select name="InstrumentID">
 						<?php
 							
-							//TODO get available options from Database
-							
-							try
+						 	//setup database
+					try
 					{
 						$dbUrl = getenv('DATABASE_URL');
 
@@ -79,20 +78,17 @@
 						die();
 					}
 					
-										
-					class User {
-						public $username;
-						public $password;
-					}
-										
-					foreach ($db->query('SELECT id, name FROM instruments') as $row) {
-						echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
-					}
-							
-							
-							//echo '<option value="0">Guitar</option>';
-							//echo '<option value="1">Cavaquinho</option>';
+					$res= $db->query('SELECT id, name FROM instruments');
+					//echo '<pre>';
+					//print_r ($res);
+					//die();
+				
 					
+					foreach ($res as $row)
+					{
+						echo '<option value="'.$row["id"].'>'.$row["name"].'</option>';				
+							
+					}		
 					
 						?>
 					</select><br>
@@ -116,10 +112,35 @@
 					<select name="InstrumentID">
 						<?php
 							
-							//TODO get available options from Database
+							//setup database
+					///try
+					//{
+					//	$dbUrl = getenv('DATABASE_URL');
+
+					//	$dbOpts = parse_url($dbUrl);
+
+					//	$dbHost = $dbOpts["host"];
+					//	$dbPort = $dbOpts["port"];
+					//	$dbUser = $dbOpts["user"];
+					//	$dbPassword = $dbOpts["pass"];
+					//	$dbName = ltrim($dbOpts["path"],'/');
+
+					//	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	
+					//	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);				
+					//}
+					//	catch (PDOException $ex)
+					//{
+					//	echo 'Error!: ' . $ex->getMessage();
+					//	die();
+					//}
+	
+					
+					foreach ($db->query('SELECT id, name FROM instruments') as $row)
+					{
+						echo '<option value="'.$row["id"].'>'.$row["name"].'</option>';				
 							
-							echo '<option value="0">Guitar</option>';
-							echo '<option value="1">Cavaquinho</option>';
+					}		
 					
 					
 						?>
@@ -128,10 +149,36 @@
 					<select name="ScaleID">
 						<?php
 							
-							//TODO get available options from Database
+						/*/setup database
+					try
+					{
+						$dbUrl = getenv('DATABASE_URL');
+
+						$dbOpts = parse_url($dbUrl);
+
+						$dbHost = $dbOpts["host"];
+						$dbPort = $dbOpts["port"];
+						$dbUser = $dbOpts["user"];
+						$dbPassword = $dbOpts["pass"];
+						$dbName = ltrim($dbOpts["path"],'/');
+
+						$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	
+						$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);				
+					}
+						catch (PDOException $ex)
+					{
+						echo 'Error!: ' . $ex->getMessage();
+						die();
+					}
+	
+					*/
+					
+					foreach ($db->query('SELECT id, name FROM scales') as $row)
+					{
+						echo '<option value="'.$row["id"].'>'.$row["name"].'</option>';				
 							
-							echo '<option value="0">Major</option>';
-							echo '<option value="1">Minor</option>';
+					}		
 					
 					
 						?>
@@ -173,11 +220,35 @@
 					<select name="InstrumentID">
 						<?php
 							
-							//TODO get available options from Database
-							
-							echo '<option value="0">Guitar</option>';
-							echo '<option value="1">Cavaquinho</option>';
+							/*/setup database
+					try
+					{
+						$dbUrl = getenv('DATABASE_URL');
+
+						$dbOpts = parse_url($dbUrl);
+
+						$dbHost = $dbOpts["host"];
+						$dbPort = $dbOpts["port"];
+						$dbUser = $dbOpts["user"];
+						$dbPassword = $dbOpts["pass"];
+						$dbName = ltrim($dbOpts["path"],'/');
+
+						$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	
+						$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);				
+					}
+						catch (PDOException $ex)
+					{
+						echo 'Error!: ' . $ex->getMessage();
+						die();
+					}
+					*/
 					
+					foreach ($db->query('SELECT id, name FROM instruments') as $row)
+					{
+						echo '<option value="'.$row["id"].'>'.$row["name"].'</option>';				
+							
+					}		
 					
 						?>
 					</select><br>
@@ -185,10 +256,35 @@
 					<select name="ChordID">
 						<?php
 							
-							//TODO get available options from Database
+							/*/setup database
+					try
+					{
+						$dbUrl = getenv('DATABASE_URL');
+
+						$dbOpts = parse_url($dbUrl);
+
+						$dbHost = $dbOpts["host"];
+						$dbPort = $dbOpts["port"];
+						$dbUser = $dbOpts["user"];
+						$dbPassword = $dbOpts["pass"];
+						$dbName = ltrim($dbOpts["path"],'/');
+
+						$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	
+						$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);				
+					}
+						catch (PDOException $ex)
+					{
+						echo 'Error!: ' . $ex->getMessage();
+						die();
+					}
+					*/
+					
+					foreach ($db->query('SELECT id, name FROM chords') as $row)
+					{
+						echo '<option value="'.$row["id"].'>'.$row["name"].'</option>';				
 							
-							echo '<option value="0">Major</option>';
-							echo '<option value="1">Minor</option>';
+					}		
 					
 					
 						?>
@@ -218,7 +314,7 @@
 				</div>
 			</div>
 			
-		<div>
+		</div>
 		
 		<div id="footer" class="footer">
 			Fretboard Mapper
