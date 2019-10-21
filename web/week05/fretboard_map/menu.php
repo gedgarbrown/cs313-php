@@ -314,7 +314,7 @@
 				</div>
 			</div>
 			
-		<div>
+		</div>
 		
 		<div id="footer" class="footer">
 			Fretboard Mapper
