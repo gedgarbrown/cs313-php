@@ -101,13 +101,15 @@
 						if($goodLogin == TRUE) {
 							
 							
-							echo 'Login Successful!!<br>';
+							//echo 'Login Successful!!<br>';
 							
 							$_SESSION["loggedIn"] = true;
 							$_SESSION["username"] = $post['username'];
 							
-							echo '<form method="post" action="menu.php"><input type="submit" value="Continue">';
+							echo '<form method="post" action="menu.php">
+							<input type="submit" value="Continue">';
 							echo '<br><br><br></form>';
+							
 						}
 						else {
 							echo 'Login Unsuccessful!!<br>';
