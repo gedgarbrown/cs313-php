@@ -242,7 +242,7 @@
 						echo 'Error!: ' . $ex->getMessage();
 						die();
 					}
-	
+					*/
 					
 					foreach ($db->query('SELECT id, name FROM instruments') as $row)
 					{
@@ -256,7 +256,7 @@
 					<select name="ChordID">
 						<?php
 							
-							//setup database
+							/*/setup database
 					try
 					{
 						$dbUrl = getenv('DATABASE_URL');
