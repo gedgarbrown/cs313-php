@@ -77,13 +77,14 @@
 						echo 'Error!: ' . $ex->getMessage();
 						die();
 					}
+					
 					$res= $db->query('SELECT id, name FROM instruments');
 					echo '<pre>';
 					print_r ($res);
-					die();
+					//die();
 				
 					
-					foreach ($db->query('SELECT id, name FROM instruments') as $row)
+					foreach ($res as $row)
 					{
 						echo '<option value="'.$row["id"].'>'.$row["name"].'</option>';				
 							
