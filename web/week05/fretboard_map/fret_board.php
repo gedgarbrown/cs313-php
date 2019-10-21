@@ -33,7 +33,7 @@
 						die();
 					}
 					
-					$instrumentID = $post[InstrumentID];
+					$instrumentID = $post['InstrumentID'];
 					
 					$instrumentName = $db->query("SELECT name FROM instruments WHERE id=$instrumentID");
 				
