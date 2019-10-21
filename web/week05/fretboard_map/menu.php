@@ -77,7 +77,11 @@
 						echo 'Error!: ' . $ex->getMessage();
 						die();
 					}
-	
+					$res= $db->query('SELECT id, name FROM instruments');
+					echo '<pre>';
+					print_r ($res);
+					die();
+				
 					
 					foreach ($db->query('SELECT id, name FROM instruments') as $row)
 					{
