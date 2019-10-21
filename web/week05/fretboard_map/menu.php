@@ -79,11 +79,7 @@
 						die();
 					}
 					
-										
-					class User {
-						public $username;
-						public $password;
-					}
+					
 										
 					foreach ($db->query('SELECT id, name FROM instruments') as $row) {
 						echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
@@ -117,9 +113,12 @@
 						<?php
 							
 							//TODO get available options from Database
+							foreach ($db->query('SELECT id, name FROM instruments') as $row) {
+							echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+							}
 							
-							echo '<option value="0">Guitar</option>';
-							echo '<option value="1">Cavaquinho</option>';
+							//echo '<option value="0">Guitar</option>';
+							//echo '<option value="1">Cavaquinho</option>';
 					
 					
 						?>
@@ -129,9 +128,11 @@
 						<?php
 							
 							//TODO get available options from Database
-							
-							echo '<option value="0">Major</option>';
-							echo '<option value="1">Minor</option>';
+							foreach ($db->query('SELECT id, name FROM scales') as $row) {
+							echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+							}
+							//echo '<option value="0">Major</option>';
+							//echo '<option value="1">Minor</option>';
 					
 					
 						?>
@@ -174,9 +175,12 @@
 						<?php
 							
 							//TODO get available options from Database
+							foreach ($db->query('SELECT id, name FROM instruments') as $row) {
+							echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+							}
 							
-							echo '<option value="0">Guitar</option>';
-							echo '<option value="1">Cavaquinho</option>';
+							//echo '<option value="0">Guitar</option>';
+							//echo '<option value="1">Cavaquinho</option>';
 					
 					
 						?>
@@ -186,6 +190,9 @@
 						<?php
 							
 							//TODO get available options from Database
+							foreach ($db->query('SELECT id, name FROM chords') as $row) {
+							echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+							}
 							
 							echo '<option value="0">Major</option>';
 							echo '<option value="1">Minor</option>';
