@@ -79,8 +79,8 @@
 					}
 					
 					$res= $db->query('SELECT id, name FROM instruments');
-					echo '<pre>';
-					print_r ($res);
+					//echo '<pre>';
+					//print_r ($res);
 					//die();
 				
 					
@@ -113,27 +113,27 @@
 						<?php
 							
 							//setup database
-					try
-					{
-						$dbUrl = getenv('DATABASE_URL');
+					///try
+					//{
+					//	$dbUrl = getenv('DATABASE_URL');
 
-						$dbOpts = parse_url($dbUrl);
+					//	$dbOpts = parse_url($dbUrl);
 
-						$dbHost = $dbOpts["host"];
-						$dbPort = $dbOpts["port"];
-						$dbUser = $dbOpts["user"];
-						$dbPassword = $dbOpts["pass"];
-						$dbName = ltrim($dbOpts["path"],'/');
+					//	$dbHost = $dbOpts["host"];
+					//	$dbPort = $dbOpts["port"];
+					//	$dbUser = $dbOpts["user"];
+					//	$dbPassword = $dbOpts["pass"];
+					//	$dbName = ltrim($dbOpts["path"],'/');
 
-						$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+					//	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 	
-						$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);				
-					}
-						catch (PDOException $ex)
-					{
-						echo 'Error!: ' . $ex->getMessage();
-						die();
-					}
+					//	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);				
+					//}
+					//	catch (PDOException $ex)
+					//{
+					//	echo 'Error!: ' . $ex->getMessage();
+					//	die();
+					//}
 	
 					
 					foreach ($db->query('SELECT id, name FROM instruments') as $row)
@@ -149,7 +149,7 @@
 					<select name="ScaleID">
 						<?php
 							
-						//setup database
+						/*/setup database
 					try
 					{
 						$dbUrl = getenv('DATABASE_URL');
@@ -172,6 +172,7 @@
 						die();
 					}
 	
+					*/
 					
 					foreach ($db->query('SELECT id, name FROM scales') as $row)
 					{
@@ -219,7 +220,7 @@
 					<select name="InstrumentID">
 						<?php
 							
-							//setup database
+							/*/setup database
 					try
 					{
 						$dbUrl = getenv('DATABASE_URL');
@@ -277,7 +278,7 @@
 						echo 'Error!: ' . $ex->getMessage();
 						die();
 					}
-	
+					*/
 					
 					foreach ($db->query('SELECT id, name FROM chords') as $row)
 					{
