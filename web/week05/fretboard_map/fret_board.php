@@ -98,26 +98,41 @@
 						
 						//TODO declare variables (to be replaced with Post from SQL Queries
 						$num_strings = 0;
+						foreach ($db->query("SELECT num_strings FROM instruments WHERE id = {$instrumentID}") as $row) {
+							$num_strings = $row['num_strings'];
+						}
+						
+						$tuning = array();
+						foreach ($db->query("SELECT s0, s1, s2, s3, s4, s5, s6, s7 FROM instruments WHERE id = {$instrumentID}") as $row) {
+							
+								$tuning['s0'] = $row['s0'];
+								$tuning['s1'] = $row['s1'];
+								$tuning['s2'] = $row['s2'];
+								$tuning['s3'] = $row['s3'];
+								$tuning['s4'] = $row['s4'];
+								$tuning['s5'] = $row['s5'];
+								$tuning['s6'] = $row['s6'];
+								$tuning['s7'] = $row['s7'];
+						}
 						
 						
-						//TODO get post ID code and pull name from Database
-						$post = $_POST;
+						
 			
-						if ($post["InstrumentID"] == 0) {
+						/*if ($post["InstrumentID"] == 0) {
 							$num_strings = 6;
 							$tuning = array(4, 9, 2, 7, 11, 4);
 						}
 						else {							
 							$num_strings = 4;
 							$tuning = array(2, 7, 11, 2);
-						}
+						}*/
 						
 						//open strings
 						echo '<img src="image/blank_note.png" class="fretboard" height="50" width="36">';
 						
 						for ($x=0; $x < $num_strings; $x++) {
 							
-							echo '<img src="image/note_'.$tuning[$x].'.png" class="fretboard" height="50" width="36">';					
+							echo '<img src="image/note_'.$tuning['s'.$x].'.png" class="fretboard" height="50" width="36">';					
 						}
 						
 						echo '<img src="image/blank_note.png" class="fretboard" height="50" width="36"><br>';
