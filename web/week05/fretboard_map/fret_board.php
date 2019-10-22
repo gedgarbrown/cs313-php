@@ -34,8 +34,8 @@
 					
 					$instrumentID = $post['InstrumentID'];
 					
-					//$instrumentName = $db->query("SELECT name FROM instruments WHERE id=$instrumentID");
-					$instrumentName = 'Guitar';
+					$instrumentName = $db->query("SELECT name FROM instruments WHERE id = {$instrumentID}");
+					//$instrumentName = 'Guitar';
 					
 			//if ($post["InstrumentID"] == 0) {
 			//	echo 'Guitar Fretboard Map';
