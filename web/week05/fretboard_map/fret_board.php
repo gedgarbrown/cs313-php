@@ -60,26 +60,7 @@
 				</div>
 				<div class="col-6 center">
 					Fretboard map of:
-					<?php
-					
-					//echo '<pre>';
-					//print_r($_POST);
-					//die();
-					
-						//TODO get post ID code and pull name from Database
-						$post = $_POST;
-						
-						//foreach($post as $i)
-							//echo $i;
-							
-						if ($post["InstrumentID"] == 0) {
-							echo 'Guitar';
-						}
-						else
-							echo 'Cavaquinho';
-						
-					
-					?>
+					<?php echo $instrumentName;?>
 					<br>
 					<hr>
 				</div>
