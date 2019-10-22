@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="week5.css">
 	<script src="week5.js"></script>
-	<title>
 		<?php
 		
 			//TODO get post ID code and pull name from Database
@@ -37,7 +36,7 @@
 					
 					$instrumentName = $db->query("SELECT name FROM instruments WHERE id=$instrumentID");
 				
-					echo $instrumentName.' Fretboard Map';
+					
 			//if ($post["InstrumentID"] == 0) {
 			//	echo 'Guitar Fretboard Map';
 			//}
@@ -46,6 +45,8 @@
 		
 		
 		?>
+	<title>
+		<?php echo $instrumentName.' Fretboard Map';?>
 	</title>
 </head>
 <body>	
