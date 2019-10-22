@@ -105,14 +105,14 @@
 						$tuning = array();
 						foreach ($db->query("SELECT s0, s1, s2, s3, s4, s5, s6, s7 FROM instruments WHERE id = {$instrumentID}") as $row) {
 							
-								$tuning['s0'] = $row['s0'];
-								$tuning['s1'] = $row['s1'];
-								$tuning['s2'] = $row['s2'];
-								$tuning['s3'] = $row['s3'];
-								$tuning['s4'] = $row['s4'];
-								$tuning['s5'] = $row['s5'];
-								$tuning['s6'] = $row['s6'];
-								$tuning['s7'] = $row['s7'];
+								$tuning[0] = $row['s0'];
+								$tuning[1] = $row['s1'];
+								$tuning[2] = $row['s2'];
+								$tuning[3] = $row['s3'];
+								$tuning[4] = $row['s4'];
+								$tuning[5] = $row['s5'];
+								$tuning[6] = $row['s6'];
+								$tuning[7] = $row['s7'];
 						}
 						
 						
@@ -132,7 +132,7 @@
 						
 						for ($x=0; $x < $num_strings; $x++) {
 							
-							echo '<img src="image/note_'.$tuning['s'.$x].'.png" class="fretboard" height="50" width="36">';					
+							echo '<img src="image/note_'.$tuning[$x].'.png" class="fretboard" height="50" width="36">';					
 						}
 						
 						echo '<img src="image/blank_note.png" class="fretboard" height="50" width="36"><br>';
