@@ -55,7 +55,7 @@
 					<select name="InstrumentID">
 						<?php
 							
-							//TODO get available options from Database
+							
 							
 							try
 					{
@@ -81,10 +81,13 @@
 					
 					
 										
-					foreach ($db->query('SELECT id, name FROM instruments') as $row) {
+					foreach ($db->query("SELECT id, name FROM instruments WHERE standard='t'") as $row) {
 						echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
 					}
-							
+					
+					foreach ($db->query("SELECT id, name FROM instruments WHERE user_id= {$SESSION['user_id'}") as $row) {
+						echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+					}
 							
 							//echo '<option value="0">Guitar</option>';
 							//echo '<option value="1">Cavaquinho</option>';
