@@ -89,6 +89,10 @@
 					
 					$insUserPdo->execute();
 					
+					$_SESSION["loggedIn"] = true;
+					$_SESSION["username"] = $post['username'];
+					$_SESSION["user_id"] = $userID;
+					
 					echo 'User '.$myUser->username.' created!!<br><br>';								
 					echo '<form method="post" action="login.php"><input type="submit" value="Continue"><br><br>';
 					

@@ -78,6 +78,7 @@
 					//echo $myUser->password.'<br>';
 					
 					$goodLogin = false;
+					$userID = 0;
 					
 					foreach ($db->query('SELECT username, password FROM users') as $row)
 					{
@@ -92,6 +93,7 @@
 								if ($myUser->password == $row['password']) {
 									//echo $goodLogin.'<br>';
 									$goodLogin = true;
+									$userID = $row['id'];
 								}
 						}
 					}						
@@ -105,7 +107,7 @@
 							
 							$_SESSION["loggedIn"] = true;
 							$_SESSION["username"] = $post['username'];
-							
+							$_SESSION["user_id"] = $userID;
 							echo '<form method="post" action="menu.php"><input type="submit" value="Continue">';
 							echo '<br><br><br></form>';
 							
