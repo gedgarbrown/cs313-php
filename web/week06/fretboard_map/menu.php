@@ -85,7 +85,9 @@
 						echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
 					}
 					
-					foreach ($db->query("SELECT id, name FROM instruments WHERE user_id= {$SESSION['user_id'}") as $row) {
+					 
+					 
+					foreach ($db->query("SELECT id, name FROM instruments WHERE user_id= {$_SESSION['user_id']}") as $row) {
 						echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
 					}
 							
