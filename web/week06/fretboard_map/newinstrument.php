@@ -81,8 +81,8 @@
 					$insInstSql = 'INSERT INTO instruments(name, num_strings, s0, s1, s2, s3, s4, s5, s6, s7) VALUES(:name, :num_strings, :s0, :s1, :s2, :s3, :s4, :s5, :s6, :s7)';
 					$insInstPdo = $db->prepare($insUserSql);
 					
-					$insInstPdo->bindValue(':name', $myUser->username);
-					$insInstPdo->bindValue(':num_strings', $myUser->username);
+					$insInstPdo->bindValue(':name', $name);
+					$insInstPdo->bindValue(':num_strings', $num_strings);
 					$insInstPdo->bindValue(':s0', $s0);
 					$insInstPdo->bindValue(':s1', $s1);
 					$insInstPdo->bindValue(':s2', $s2);
