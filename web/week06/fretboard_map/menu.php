@@ -24,8 +24,6 @@
 			}
 		?>
 		</span>
-		
-<!--		<a href="cart.php">View Cart</a> -->
 	</div>	
 	<div id="main" class="main">
 		<div id="header" class="header">
@@ -81,7 +79,7 @@
 					}
 					
 					
-										
+					//pulling instruments from database				
 					foreach ($db->query("SELECT id, name FROM instruments WHERE standard='t'") as $row) {
 						echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
 					}
@@ -103,6 +101,9 @@
 					
 					<input type="submit" value="Create Map">
 				</form>	
+				<form method="post" action="createinstrument.php">
+					<input type="submit" class="edit_submit" value="Create New Instrument">
+				</form> 
 				<br><hr><hr><br>
 				</div>
 				<div class="col-3">&nbsp;
@@ -120,13 +121,17 @@
 					<select name="InstrumentID">
 						<?php
 							
-							//TODO get available options from Database
-							foreach ($db->query('SELECT id, name FROM instruments') as $row) {
-							echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+							//Pulling instruments from database
+							foreach ($db->query("SELECT id, name FROM instruments WHERE standard='t'") as $row) {
+								echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
 							}
 							
-							//echo '<option value="0">Guitar</option>';
-							//echo '<option value="1">Cavaquinho</option>';
+							foreach ($db->query("SELECT id, name FROM instruments WHERE user_id={$_SESSION["user_id"]}") as $row) {
+								if(isset($row)){
+									echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+								}
+							}
+							
 					
 					
 						?>
@@ -135,9 +140,15 @@
 					<select name="ScaleID">
 						<?php
 							
-							//TODO get available options from Database
-							foreach ($db->query('SELECT id, name FROM scales') as $row) {
-							echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+							//pulling scale names from database
+							foreach ($db->query("SELECT id, name FROM scales WHERE standard='t'") as $row) {
+								echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+							}
+							
+							foreach ($db->query("SELECT id, name FROM scales WHERE user_id={$_SESSION["user_id"]}") as $row) {
+								if(isset($row)){
+									echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+								}
 							}
 							//echo '<option value="0">Major</option>';
 							//echo '<option value="1">Minor</option>';
@@ -164,6 +175,9 @@
 					<br>
 					<input type="submit" value="Create Map">
 				</form>	
+				<form method="post" action="create_scale.php">
+					<input type="submit" class="edit_submit" value="Create New Scale">
+				</form> 
 				<br><hr><hr><br>
 				</div>
 				<div class="col-3">&nbsp;
@@ -182,13 +196,16 @@
 					<select name="InstrumentID">
 						<?php
 							
-							//TODO get available options from Database
-							foreach ($db->query('SELECT id, name FROM instruments') as $row) {
-							echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+							//Pulling instruments from database
+							foreach ($db->query("SELECT id, name FROM instruments WHERE standard='t'") as $row) {
+								echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
 							}
 							
-							//echo '<option value="0">Guitar</option>';
-							//echo '<option value="1">Cavaquinho</option>';
+							foreach ($db->query("SELECT id, name FROM instruments WHERE user_id={$_SESSION["user_id"]}") as $row) {
+								if(isset($row)){
+									echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+								}
+							}
 					
 					
 						?>
@@ -197,13 +214,16 @@
 					<select name="ChordID">
 						<?php
 							
-							//TODO get available options from Database
-							foreach ($db->query('SELECT id, name FROM chords') as $row) {
-							echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+							//Pulling instruments from database
+							foreach ($db->query("SELECT id, name FROM chords WHERE standard='t'") as $row) {
+								echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
 							}
 							
-							echo '<option value="0">Major</option>';
-							echo '<option value="1">Minor</option>';
+							foreach ($db->query("SELECT id, name FROM chords WHERE user_id={$_SESSION["user_id"]}") as $row) {
+								if(isset($row)){
+									echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+								}
+							}
 					
 					
 						?>
@@ -227,6 +247,9 @@
 					<br>
 					<input type="submit" value="Create Map">
 				</form>	
+				<form method="post" action="createchord.php">
+					<input type="submit" class="edit_submit" value="Create New Chord">
+				</form> 
 				<br><hr><hr><br>
 				</div>
 				<div class="col-3">&nbsp;

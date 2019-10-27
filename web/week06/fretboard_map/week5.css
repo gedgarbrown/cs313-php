@@ -144,6 +144,13 @@ body {
 
 }
 
+.edit_submit {
+
+	background: #D0D19B;
+
+
+}
+
 
 /* CSS for dynamic placement*/
 [class*="col-"] {
