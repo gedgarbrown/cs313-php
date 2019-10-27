@@ -58,18 +58,7 @@
 				<div class="col-3">&nbsp;
 				</div>
 			</div>
-			<div class="row">	
-				<div class="col-3">&nbsp;
-				</div>
-				<div class="col-6">
-					<form name="signupForm" method="post" action="signup.php">
-						<input type="submit" value="Create User" >
-					</form>
-				</div>
-				<div class="col-3">&nbsp;
-				</div>
-			</div>
-			
+						
 			
 		<div>
 		

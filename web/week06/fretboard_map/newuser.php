@@ -87,7 +87,7 @@
 					$insUserPdo->bindValue(':first_name', $myUser->first_name);
 					$insUserPdo->bindValue(':last_name', $myUser->last_name);
 					
-					
+					$insUserPdo->execute();
 					
 					echo 'User '.$myUser->username.' created!!<br><br>';								
 					echo '<form method="post" action="menu.php"><input type="submit" value="Continue">';

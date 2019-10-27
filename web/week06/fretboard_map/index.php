@@ -59,6 +59,7 @@
 					<form name="signupForm" method="post" action="signup.php">
 						<input type="submit" value="Create User" >
 					</form>
+					<br><br>
 				</div>
 				<div class="col-3">&nbsp;
 				</div>
