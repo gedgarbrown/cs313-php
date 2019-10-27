@@ -108,7 +108,7 @@
 							$_SESSION["loggedIn"] = true;
 							$_SESSION["username"] = $post['username'];
 							$_SESSION["user_id"] = $userID;
-							echo $_SESSION["user_id"];
+							//echo $_SESSION["user_id"];
 							echo '<form method="post" action="menu.php"><input type="submit" value="Continue">';
 							echo '<br><br><br></form>';
 							
