@@ -79,7 +79,7 @@
 					$s7 = $post['s7'];
 					
 					$insInstSql = 'INSERT INTO instruments(name, num_strings, s0, s1, s2, s3, s4, s5, s6, s7) VALUES(:name, :num_strings, :s0, :s1, :s2, :s3, :s4, :s5, :s6, :s7)';
-					$insInstPdo = $db->prepare($insUserSql);
+					$insInstPdo = $db->prepare($insInstSql);
 					
 					$insInstPdo->bindValue(':name', $name);
 					$insInstPdo->bindValue(':num_strings', $num_strings);
