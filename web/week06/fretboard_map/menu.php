@@ -19,7 +19,7 @@
 				if ($_SESSION["loggedIn"] == true) {
 					echo 'Logged in as:<br>'.$_SESSION["username"].'<br>';
 					echo '<a href="index.php">Log Out</a>';
-					
+					echo $_SESSION["user_id"];
 				}
 			}
 		?>
@@ -88,11 +88,11 @@
 					
 					 
 					 
-					foreach ($db->query("SELECT id, name FROM instruments WHERE user_id= {$_SESSION["user_id"]}") as $row) {
-						if(isset($row)){
-							echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
-						}
-					}
+					//foreach ($db->query("SELECT id, name FROM instruments WHERE user_id={$_SESSION["user_id"]}") as $row) {
+						//if(isset($row)){
+							//echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+						//}
+					//}
 							
 							//echo '<option value="0">Guitar</option>';
 							//echo '<option value="1">Cavaquinho</option>';
