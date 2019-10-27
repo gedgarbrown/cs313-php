@@ -19,7 +19,7 @@
 				if ($_SESSION["loggedIn"] == true) {
 					echo 'Logged in as:<br>'.$_SESSION["username"].'<br>';
 					echo '<a href="index.php">Log Out</a>';
-					echo $_SESSION["user_id"];
+					//echo $_SESSION["user_id"];
 				}
 			}
 		?>
