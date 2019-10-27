@@ -80,7 +80,7 @@
 					$goodLogin = false;
 					$userID = 0;
 					
-					foreach ($db->query('SELECT username, password FROM users') as $row)
+					foreach ($db->query('SELECT username, password, id FROM users') as $row)
 					{
 						
 						//echo $row['username'].'<br>';
