@@ -68,7 +68,7 @@
 						public $username;
 						public $password;
 						public $firstName;
-						public $lastName
+						public $lastName;
 					}
 					
 					$post =$_POST;
@@ -79,15 +79,15 @@
 					$myUser->first_name = $post['first_name'];
 					$myUser->last_name = $post['last_name'];
 					
-					//$insUserSql = 'INSERT INTO users(username, password, first_name, last_name) VALUES(:username, :password, :first_name, :last_name)';
-					//$insUserPdo = $db->prepare($insUserSql);
+					$insUserSql = 'INSERT INTO users(username, password, first_name, last_name) VALUES(:username, :password, :first_name, :last_name)';
+					$insUserPdo = $db->prepare($insUserSql);
 					
-					//$insUserPdo->bindValue(':username', $myUser->username);
-					//$insUserPdo->bindValue(':password', $myUser->password);
-					//$insUserPdo->bindValue(':first_name', $myUser->first_name);
-					//$insUserPdo->bindValue(':last_name', $myUser->last_name);
+					$insUserPdo->bindValue(':username', $myUser->username);
+					$insUserPdo->bindValue(':password', $myUser->password);
+					$insUserPdo->bindValue(':first_name', $myUser->first_name);
+					$insUserPdo->bindValue(':last_name', $myUser->last_name);
 					
-					//$insUserPdo->execute();
+					$insUserPdo->execute();
 					
 					echo 'User '.$myUser->username.' created!!<br><br>';								
 					echo '<form method="post" action="menu.php"><input type="submit" value="Continue">';
