@@ -90,7 +90,7 @@
 					$insUserPdo->execute();
 					
 					echo 'User '.$myUser->username.' created!!<br><br>';								
-					echo '<form method="post" action="menu.php"><input type="submit" value="Continue">';
+					echo '<form method="post" action="login.php"><input type="submit" value="Continue"><br><br>';
 					
 						
 					?>
