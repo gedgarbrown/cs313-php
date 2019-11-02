@@ -26,7 +26,7 @@ function hideStrings() {
 	var selector = document.getElementById("num_strings");
 	var num_strings = selector.options[selector.selectedIndex].value;
 	
-	document.getElementById("invalidName").innerHTML = $num_strings;
+	document.getElementById("invalidName").innerHTML = num_strings;
 	
 	
 	
