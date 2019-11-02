@@ -50,7 +50,7 @@
 				<div class="col-6">
 					<form name="newInstrument" method="post" action="newinstrument.php" onsubmit="return submitNewUser()">
 						Please enter information for Instrument:<br><br>
-						Name: <input type="text" name="username" size="20" onblur="newUsernameValid()">
+						Name: <input type="text" name="name" size="20" onblur="newUsernameValid()">
 						<span class="error" id="invalidUsername"></span><br>
 						Number of Strings: 
 						<select name="num_strings">
