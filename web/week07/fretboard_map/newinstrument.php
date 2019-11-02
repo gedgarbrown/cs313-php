@@ -71,7 +71,9 @@
 						die();
 					}
 					
-										
+					echo '<pre>';
+					print_r($_POST);
+					die();				
 									
 					$post =$_POST;
 					
