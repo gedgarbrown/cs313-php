@@ -1,7 +1,7 @@
 function nameValid() {
 		
 	if(document.newInstrument.name.value == "") {
-		document.getElementById("invalidUsername").innerHTML = "enter a name for the new instrument!!";
+		document.getElementById("invalidName").innerHTML = "enter a name for the new instrument!!";
 		return false;
 	}
 		
@@ -22,7 +22,9 @@ function submitNewInstrument() {
 
 function hideStrings() {
 	
-	$num_strings = document.getElementById("num_strings").value;
+	
+	var selector = document.getElementById("num_strings");
+	var num_strings = selector.options[selector.selectedIndex].value;
 	
 	document.getElementById("invalidName").innerHTML = $num_strings;
 	
