@@ -103,6 +103,7 @@
 					for ($x = 0, $x <8, $x++) {
 						
 						$i = 's' + x;
+						$b = ':' + $i;
 						if ($x < $num_strings){
 							$sx[$x] = $post['$i'];
 						}
@@ -110,9 +111,13 @@
 							$sx[$x] = NULL;
 						}
 						
-						$insInstPdo->bindValue(':s1', $sx[$x]);	
+						$insInstPdo->bindValue($b, $sx[$x]);	
 					}
-								
+						
+					
+
+					
+					
 					
 					$insInstPdo->bindValue(':standard', FALSE);
 					$insInstPdo->bindValue(':user_id', $_SESSION["userID"]);
