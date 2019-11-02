@@ -12,7 +12,7 @@
 	<script src="createinstrument.js"></script>
 	<title>George Brown: Week 5 Fretboard Mapper</title>
 </head>
-<body onload="loadIndex()">	
+<body onload="loadCreateInstrument()">	
 	<div id="mySidenav" class="sidenav">
 		<span class="sidetext">
 		<?php

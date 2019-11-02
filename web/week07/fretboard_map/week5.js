@@ -183,3 +183,8 @@ function loadIndex() {
 	
 	document.loginForm.username.focus();
 }
+
+function loadCreateInstrument() {
+	
+	document.newInstrument.name.focus();
+}

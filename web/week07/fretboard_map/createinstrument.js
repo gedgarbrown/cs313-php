@@ -1,14 +1,12 @@
 function nameValid() {
-	
 		
+	if(document.newInstrument.name.value == "") {
+		document.getElementById("invalidUsername").innerHTML = "enter a name for the new instrument!!";
+		return false;
+	}
 		
-		if((document.newInstrument.name.value == "") {
-			document.getElementById("invalidUsername").innerHTML = "enter a name for the new instrument!!";
-			return false;
-		}
-		
-		document.getElementById("invalidName").innerHTML = "";
-		return true;
+	document.getElementById("invalidName").innerHTML = "";
+	return true;
 	
 }
 
