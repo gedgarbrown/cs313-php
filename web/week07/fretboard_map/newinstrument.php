@@ -12,18 +12,10 @@
 </head>
 <body>	
 	<div id="mySidenav" class="sidenav">
-		<span class="sidetext">
-		<?php
-			if (isset($_SESSION["loggedIn"]) || isset($_SESSION["username"])) {
-				if ($_SESSION["loggedIn"] == true) {
-					echo 'Logged in as:<br>'.$_SESSION["username"].'<br>';
-					echo '<a href="index.php">Log Out</a>';
-					//echo $_SESSION["user_id"];
-				}
-			}
-		?>
-		</span>
-	</div
+		<a href="index.php">Login</a>
+		
+
+	</div>	
 	<div id="main" class="main">
 		<div id="header" class="header">
 			Fretboard Mapper
@@ -52,15 +44,12 @@
 					try
 					{
 						$dbUrl = getenv('DATABASE_URL');
-
 						$dbOpts = parse_url($dbUrl);
-
 						$dbHost = $dbOpts["host"];
 						$dbPort = $dbOpts["port"];
 						$dbUser = $dbOpts["user"];
 						$dbPassword = $dbOpts["pass"];
 						$dbName = ltrim($dbOpts["path"],'/');
-
 						$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 	
 						$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);				
@@ -71,17 +60,12 @@
 						die();
 					}
 					
-					//echo '<pre>';
-					//print_r($_POST);
-					//die();				
+										
 									
 					$post =$_POST;
 					
 					$name = $post['name'];
 					$num_strings = $post['num_strings'];
-					//$sx = array();
-					$user_id = $_SESSION['userID'];
-
 					$s0 = $post['s0'];
 					$s1 = $post['s1'];
 					$s2 = $post['s2'];
@@ -91,25 +75,11 @@
 					$s6 = $post['s6'];
 					$s7 = $post['s7'];
 					
-					
-					
-					//echo $s0.'<br>';
-					//echo $s1.'<br>';
-					//echo $s2.'<br>';
-					//echo $s3.'<br>';
-					//echo $s4.'<br>';
-					//echo $s5.'<br>';
-					//echo $s6.'<br>';
-					//echo $s7.'<br>';
-					
-					$insInstSql = 'INSERT INTO instruments(name, num_strings, s0, s1, s2, s3, s4, s5, s6, s7, standard, user_id)
-							VALUES(:name, :num_strings, :s0, :s1, :s2, :s3, :s4, :s5, :s6, :s7, :standard, :user_id)';
+					$insInstSql = 'INSERT INTO instruments(name, num_strings, s0, s1, s2, s3, s4, s5, s6, s7) VALUES(:name, :num_strings, :s0, :s1, :s2, :s3, :s4, :s5, :s6, :s7)';
 					$insInstPdo = $db->prepare($insInstSql);
 					
 					$insInstPdo->bindValue(':name', $name);
 					$insInstPdo->bindValue(':num_strings', $num_strings);
-					
-					
 					$insInstPdo->bindValue(':s0', $s0);
 					$insInstPdo->bindValue(':s1', $s1);
 					$insInstPdo->bindValue(':s2', $s2);
@@ -119,12 +89,8 @@
 					$insInstPdo->bindValue(':s6', $s6);
 					$insInstPdo->bindValue(':s7', $s7);
 					
-					$insInstPdo->bindValue(':standard', FALSE);
-					$insInstPdo->bindValue(':user_id', $user_id);
-					
 					$insInstPdo->execute();
-					
-							
+										
 					
 					echo 'Instrument Created!!<br><br>';								
 					echo '<form method="post" action="menu.php"><input type="submit" value="Menu"></form><br><br>';
