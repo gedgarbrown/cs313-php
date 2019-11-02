@@ -12,10 +12,18 @@
 </head>
 <body>	
 	<div id="mySidenav" class="sidenav">
-		<a href="index.php">Login</a>
-		
-
-	</div>	
+		<span class="sidetext">
+		<?php
+			if (isset($_SESSION["loggedIn"]) || isset($_SESSION["username"])) {
+				if ($_SESSION["loggedIn"] == true) {
+					echo 'Logged in as:<br>'.$_SESSION["username"].'<br>';
+					echo '<a href="index.php">Log Out</a>';
+					//echo $_SESSION["user_id"];
+				}
+			}
+		?>
+		</span>
+	</div
 	<div id="main" class="main">
 		<div id="header" class="header">
 			Fretboard Mapper
@@ -78,22 +86,31 @@
 					$s6 = $post['s6'];
 					$s7 = $post['s7'];
 					
-					$insInstSql = 'INSERT INTO instruments(name, num_strings, s0, s1, s2, s3, s4, s5, s6, s7) VALUES(:name, :num_strings, :s0, :s1, :s2, :s3, :s4, :s5, :s6, :s7)';
-					$insInstPdo = $db->prepare($insInstSql);
+					echo $s0.'<br>';
+					echo $s1.'<br>';
+					echo $s2.'<br>';
+					echo $s3.'<br>';
+					echo $s4.'<br>';
+					echo $s5.'<br>';
+					echo $s6.'<br>';
+					echo $s7.'<br>';
 					
-					$insInstPdo->bindValue(':name', $name);
-					$insInstPdo->bindValue(':num_strings', $num_strings);
-					$insInstPdo->bindValue(':s0', $s0);
-					$insInstPdo->bindValue(':s1', $s1);
-					$insInstPdo->bindValue(':s2', $s2);
-					$insInstPdo->bindValue(':s3', $s3);
-					$insInstPdo->bindValue(':s4', $s4);
-					$insInstPdo->bindValue(':s5', $s5);
-					$insInstPdo->bindValue(':s6', $s6);
-					$insInstPdo->bindValue(':s7', $s7);
+					//$insInstSql = 'INSERT INTO instruments(name, num_strings, s0, s1, s2, s3, s4, s5, s6, s7) VALUES(:name, :num_strings, :s0, :s1, :s2, :s3, :s4, :s5, :s6, :s7)';
+					//$insInstPdo = $db->prepare($insInstSql);
+					
+					//$insInstPdo->bindValue(':name', $name);
+					//$insInstPdo->bindValue(':num_strings', $num_strings);
+					//$insInstPdo->bindValue(':s0', $s0);
+					//$insInstPdo->bindValue(':s1', $s1);
+					//$insInstPdo->bindValue(':s2', $s2);
+					//$insInstPdo->bindValue(':s3', $s3);
+					//$insInstPdo->bindValue(':s4', $s4);
+					//$insInstPdo->bindValue(':s5', $s5);
+					//$insInstPdo->bindValue(':s6', $s6);
+					//$insInstPdo->bindValue(':s7', $s7);
 
 					
-					$insInstPdo->execute();
+					//$insInstPdo->execute();
 										
 					
 					echo 'Instrument Created!!<br><br>';								
