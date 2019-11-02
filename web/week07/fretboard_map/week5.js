@@ -98,6 +98,34 @@ function confirm_passwordValid() {
 	
 }
 
+function confirm_passwordValid() {
+	
+		//var otherPassword = document.
+		
+		//if(document.loginForm.password.value == "") {
+		//	document.getElementById("invalidConfirm_Password").innerHTML = "enter password!!";
+		//	return false;
+		//}
+		
+		//document.getElementById("invalidConfirm_Password").innerHTML = "";
+		return true;
+	
+}
+
+function confirm_passwordValid() {
+	
+		//var otherPassword = document.
+		
+		//if(document.loginForm.password.value == "") {
+		//	document.getElementById("invalidConfirm_Password").innerHTML = "enter password!!";
+		//	return false;
+		//}
+		
+		//document.getElementById("invalidConfirm_Password").innerHTML = "";
+		return true;
+	
+}
+
 function loginIsValid(){
 	var isValid = true;
 	
@@ -113,6 +141,8 @@ function loginIsValid(){
 	
 }
 
+
+
 function submitLogin() {
 	
 	if(!loginIsValid()){
@@ -126,6 +156,18 @@ function submitLogin() {
 }
 
 function submitNewUser() {
+	
+	//if(!loginIsValid()){
+		//alert("Enter username and password!!");
+		//return false;
+	//}
+	
+	//alert("Login Successful!");
+	
+	return true;
+}
+
+function submitNewInstrument() {
 	
 	//if(!loginIsValid()){
 		//alert("Enter username and password!!");

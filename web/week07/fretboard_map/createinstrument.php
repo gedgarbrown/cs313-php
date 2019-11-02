@@ -9,6 +9,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="week5.css">
 	<script src="week5.js"></script>
+	<script src="createinstrument.js"></script>
 	<title>George Brown: Week 5 Fretboard Mapper</title>
 </head>
 <body onload="loadIndex()">	
@@ -48,12 +49,12 @@
 				<div class="col-3">&nbsp;
 				</div>
 				<div class="col-6">
-					<form name="newInstrument" method="post" action="newinstrument.php" onsubmit="return submitNewUser()">
+					<form name="newInstrument" method="post" action="newinstrument.php" onsubmit="return submitNewInstrument()">
 						Please enter information for Instrument:<br><br>
 						Name: <input type="text" name="name" size="20" onblur="newUsernameValid()">
-						<span class="error" id="invalidUsername"></span><br>
+						<span class="error" id="invalidName"></span><br>
 						Number of Strings: 
-						<select name="num_strings">
+						<select name="num_strings" id="num_strings" onchange="hideStrings()">
 							<option value="1">1</option>
 							<option value="1">2</option>
 							<option value="1">3</option>
