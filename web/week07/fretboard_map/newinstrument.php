@@ -71,9 +71,9 @@
 						die();
 					}
 					
-					//echo '<pre>';
-					//print_r($_POST);
-					//die();				
+					echo '<pre>';
+					print_r($_POST);
+					die();				
 									
 					$post =$_POST;
 					
@@ -97,7 +97,7 @@
 					//echo $s6.'<br>';
 					//echo $s7.'<br>';
 					
-					$insInstSql = 'INSERT INTO instruments(name, num_strings, s0, s1, s2, s3, s4, s5, s6, s7) VALUES(:name, :num_strings, :s0, :s1, :s2, :s3, :s4, :s5, :s6, :s7)';
+					$insInstSql = 'INSERT INTO instruments(name, num_strings, s0, s1, s2, s3, s4, s5, s6, s7, standard) VALUES(:name, :num_strings, :s0, :s1, :s2, :s3, :s4, :s5, :s6, :s7, :standard)';
 					$insInstPdo = $db->prepare($insInstSql);
 					
 					$insInstPdo->bindValue(':name', $name);
@@ -110,6 +110,7 @@
 					$insInstPdo->bindValue(':s5', $s5);
 					$insInstPdo->bindValue(':s6', $s6);
 					$insInstPdo->bindValue(':s7', $s7);
+					$insInstPdo->bindValue(':standard', FALSE);
 
 					
 					$insInstPdo->execute();
