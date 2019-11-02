@@ -79,14 +79,9 @@
 					
 					$name = $post['name'];
 					$num_strings = $post['num_strings'];
-					$s0 = $post['s0'];
-					$s1 = $post['s1'];
-					$s2 = $post['s2'];
-					$s3 = $post['s3'];
-					$s4 = $post['s4'];
-					$s5 = $post['s5'];
-					$s6 = $post['s6'];
-					$s7 = $post['s7'];
+					$sx = array();
+					
+					
 					
 					//echo $s0.'<br>';
 					//echo $s1.'<br>';
@@ -103,58 +98,24 @@
 					
 					$insInstPdo->bindValue(':name', $name);
 					$insInstPdo->bindValue(':num_strings', $num_strings);
-					$insInstPdo->bindValue(':s0', $s0);
-					if (isset(s1)){
-						$insInstPdo->bindValue(':s1', $s1);
-					}
-					else { 
-						$insInstPdo->bindValue(':s1', NULL);
-					}
 					
-					if (isset(s2)){
-						$insInstPdo->bindValue(':s2', $s2);
-					}
-					else { 
-						$insInstPdo->bindValue(':s2', NULL);
-					}
 					
-					if (isset(s3)){
-						$insInstPdo->bindValue(':s3', $s3);
+					for ($x = 0, $x <8, $x++) {
+						
+						$i = 's' + x;
+						if ($x < $num_strings){
+							$sx[$x] = $post['$i'];
+						}
+						else {
+							$sx[$x] = NULL;
+						}
+						
+						$insInstPdo->bindValue(':s1', $sx[$x]);	
 					}
-					else { 
-						$insInstPdo->bindValue(':s3', NULL);
-					}
-					
-					if (isset(s4)){
-						$insInstPdo->bindValue(':s4', $s4);
-					}
-					else { 
-						$insInstPdo->bindValue(':s4', NULL);
-					}
-					
-					if (isset(s5)){
-						$insInstPdo->bindValue(':s5', $s5);
-					}
-					else { 
-						$insInstPdo->bindValue(':s5', NULL);
-					}
-					
-					if (isset(s6)){
-						$insInstPdo->bindValue(':s6', $s6);
-					}
-					else { 
-						$insInstPdo->bindValue(':s6', NULL);
-					}
-					
-					if (isset(s7)){
-						$insInstPdo->bindValue(':s7', $s7);
-					}
-					else { 
-						$insInstPdo->bindValue(':s7', NULL);
-					}
+								
 					
 					$insInstPdo->bindValue(':standard', FALSE);
-					$insInstPdo->user_id(':user_id', $_SESSION["userID"]);
+					$insInstPdo->bindValue(':user_id', $_SESSION["userID"]);
 					
 					$insInstPdo->execute();
 					
