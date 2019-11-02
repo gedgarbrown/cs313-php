@@ -12,16 +12,10 @@
 </head>
 <body>	
 	<div id="mySidenav" class="sidenav">
-		<span class="sidetext">
-		<?php
-			if (isset($_SESSION["loggedIn"]) || isset($_SESSION["username"])) {
-				if ($_SESSION["loggedIn"] == true) {
-					echo 'Logged in as:<br>'.$_SESSION["username"].'<br>';
-					echo '<a href="index.php">Log Out</a>';
-				
-				}
-			}
-		?>
+		<a href="index.php">Login</a>
+		
+
+	</div>	
 	<div id="main" class="main">
 		<div id="header" class="header">
 			Fretboard Mapper
@@ -81,19 +75,13 @@
 					$s6 = $post['s6'];
 					$s7 = $post['s7'];
 					
-					$user_id = $_SESSION["userID"];
-					
-					$insInstSql = 'INSERT INTO instruments(name, num_strings, standard, user_id) VALUES(:name, :num_strings, :standard, :user_id;';
+					$insInstSql = 'INSERT INTO instruments(name, num_strings) VALUES(:name, :num_strings)';
 					$insInstPdo = $db->prepare($insInstSql);
 					
 					$insInstPdo->bindValue(':name', $name);
 					$insInstPdo->bindValue(':num_strings', $num_strings);
-					$insInstPdo->bindValue(':standard', FALSE);
-					$insInstPdo->bindValue(':user_id', $user_id);
-					echo $user_id;
 					
-					/*
-					$insInstPdo->bindValue(':s0', $s0);
+					/*$insInstPdo->bindValue(':s0', $s0);
 					$insInstPdo->bindValue(':s1', $s1);
 					$insInstPdo->bindValue(':s2', $s2);
 					$insInstPdo->bindValue(':s3', $s3);
@@ -102,7 +90,6 @@
 					$insInstPdo->bindValue(':s6', $s6);
 					$insInstPdo->bindValue(':s7', $s7);
 					*/
-					
 					$insInstPdo->execute();
 										
 					
