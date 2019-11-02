@@ -69,7 +69,7 @@
 						
 						
 					String : 
-					<select name="s0">
+					<select name="s0" id="s0" display = "none">
 						<option value=""></option>
 						<option value="0">C</option>
 						<option value="1">C#/D♭</option>
@@ -87,7 +87,7 @@
 					<br>
 					
 					String : 
-					<select name="s1">
+					<select name="s1" id="s1" display = "none">
 						<option value=""></option>
 						<option value="0">C</option>
 						<option value="1">C#/D♭</option>
@@ -105,7 +105,7 @@
 					<br>
 					
 					String : 
-					<select name="s2">
+					<select name="s2" id="s2" display = "none">
 						<option value=""></option>
 						<option value="0">C</option>
 						<option value="1">C#/D♭</option>
@@ -123,7 +123,7 @@
 					<br>
 					
 					String : 
-					<select name="s3">
+					<select name="s3" id="s3" display = "none">
 						<option value=""></option>
 						<option value="0">C</option>
 						<option value="1">C#/D♭</option>
@@ -141,7 +141,7 @@
 					<br>
 					
 					String : 
-					<select name="s4">
+					<select name="s4" id="s4" display = "none">
 						<option value=""></option>
 						<option value="0">C</option>
 						<option value="1">C#/D♭</option>
@@ -159,7 +159,7 @@
 					<br>
 					
 					String : 
-					<select name="s5">
+					<select name="s5" id="s5" display = "none">
 						<option value=""></option>
 						<option value="0">C</option>
 						<option value="1">C#/D♭</option>
@@ -177,7 +177,7 @@
 					<br>
 					
 					String : 
-					<select name="s6">
+					<select name="s6" id="s6" display = "none">
 						<option value=""></option>
 						<option value="0">C</option>
 						<option value="1">C#/D♭</option>
@@ -195,7 +195,7 @@
 					<br>
 					
 					String : 
-					<select name="s7">
+					<select name="s7" id="s7" display = "none">
 						<option value=""></option>
 						<option value="0">C</option>
 						<option value="1">C#/D♭</option>

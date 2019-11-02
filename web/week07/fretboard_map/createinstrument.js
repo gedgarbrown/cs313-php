@@ -1,7 +1,5 @@
 function nameValid() {
 	
-	alert("calling function");
-	
 	if(document.newInstrument.name.value == "") {
 		document.getElementById("invalidName").innerHTML = "enter a name for the new instrument!!";
 		return false;
@@ -28,7 +26,20 @@ function hideStrings() {
 	var selector = document.getElementById("num_strings");
 	var num_strings = selector.options[selector.selectedIndex].value;
 	
-	document.getElementById("invalidName").innerHTML = num_strings;
+	for (x = 1; x < 8; x++) {
+		
+		var currentOption = "s" + x;
+		
+		if (x < num_strings) {
+			getElementById(currentOption).style.display = "inline";
+		}
+		else {
+			getElementById(currentOption).style.display = "none";
+		}
+		
+	}
+	
+	//document.getElementById("invalidName").innerHTML = num_strings;
 	
 	
 	
