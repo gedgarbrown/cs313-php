@@ -18,7 +18,7 @@
 				if ($_SESSION["loggedIn"] == true) {
 					echo 'Logged in as:<br>'.$_SESSION["username"].'<br>';
 					echo '<a href="index.php">Log Out</a>';
-					echo $_SESSION["user_id"];
+				
 				}
 			}
 		?>
@@ -81,15 +81,15 @@
 					$s6 = $post['s6'];
 					$s7 = $post['s7'];
 					
-					$user_id = $_SESSION["user_id"];
+					$user_id = $_SESSION["userID"];
 					
-					$insInstSql = 'INSERT INTO instruments(name, num_strings, standard, user_id) VALUES(:name, :num_strings, :standard';
+					$insInstSql = 'INSERT INTO instruments(name, num_strings, standard, user_id) VALUES(:name, :num_strings, :standard, :user_id;';
 					$insInstPdo = $db->prepare($insInstSql);
 					
 					$insInstPdo->bindValue(':name', $name);
 					$insInstPdo->bindValue(':num_strings', $num_strings);
 					$insInstPdo->bindValue(':standard', FALSE);
-					//$insInstPdo->bindValue(':user_id', $user_id);
+					$insInstPdo->bindValue(':user_id', $user_id);
 					echo $user_id;
 					
 					/*
