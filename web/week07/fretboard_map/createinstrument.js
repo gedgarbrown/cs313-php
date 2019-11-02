@@ -28,8 +28,8 @@ function hideStrings() {
 	
 	for (x = 1; x < 8; x++) {
 		
-		var currentOption = "s" + x;
-		alert(currentOption);
+		var currentOption = "s" + String(x);
+		//alert(currentOption);
 		
 		if (x < num_strings) {
 			getElementById(currentOption).style.display = "inline";
