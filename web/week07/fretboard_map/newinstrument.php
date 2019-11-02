@@ -79,8 +79,8 @@
 					
 					$name = $post['name'];
 					$num_strings = $post['num_strings'];
-					$sx = array();
-					
+					//$sx = array();
+					$user_id = $_SESSION['userID'];
 
 					$s0 = $post['s0'];
 					$s1 = $post['s1'];
@@ -120,7 +120,7 @@
 					$insInstPdo->bindValue(':s7', $s7);
 					
 					$insInstPdo->bindValue(':standard', FALSE);
-					$insInstPdo->bindValue(':user_id', $_SESSION["userID"]);
+					$insInstPdo->bindValue(':user_id', $user_id);
 					
 					$insInstPdo->execute();
 					
