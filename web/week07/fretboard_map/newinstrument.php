@@ -110,37 +110,14 @@
 					$insInstPdo->bindValue(':num_strings', $num_strings);
 					
 					
-					
-						$insInstPdo->bindValue(':s0', $s0);
-					if (num_strings < 1)
-						$insInstPdo->bindValue(':s1', $s1);
-					else
-						$insInstPdo->bindValue(':s1', NULL);
-					if (num_strings < 1)
-						$insInstPdo->bindValue(':s2', $s2);
-					else
-						$insInstPdo->bindValue(':s2', NULL);
-					
-						$insInstPdo->bindValue(':s3', $s3);
-					else
-						$insInstPdo->bindValue(':s3', NULL);
-					if (num_strings < 1)	
-						$insInstPdo->bindValue(':s4', $s4);
-					else
-						$insInstPdo->bindValue(':s4', NULL);
-					if (num_strings < 1)	
-						$insInstPdo->bindValue(':s5', $s5);
-					else
-						$insInstPdo->bindValue(':s5', NULL);
-					if (num_strings < 1)	
-						$insInstPdo->bindValue(':s6', $s6);
-					else
-						$insInstPdo->bindValue(':s6', NULL);
-					if (num_strings < 1)	
-						$insInstPdo->bindValue(':s7', $s7);
-					else
-						$insInstPdo->bindValue(':s7', NULL);
-				
+					$insInstPdo->bindValue(':s0', $s0);
+					$insInstPdo->bindValue(':s1', $s1);
+					$insInstPdo->bindValue(':s2', $s2);
+					$insInstPdo->bindValue(':s3', $s3);
+					$insInstPdo->bindValue(':s4', $s4);
+					$insInstPdo->bindValue(':s5', $s5);
+					$insInstPdo->bindValue(':s6', $s6);
+					$insInstPdo->bindValue(':s7', $s7);
 					
 					$insInstPdo->bindValue(':standard', FALSE);
 					$insInstPdo->bindValue(':user_id', $_SESSION["userID"]);
