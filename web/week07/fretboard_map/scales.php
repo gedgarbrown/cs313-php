@@ -59,25 +59,7 @@
 				<div class="col-3">&nbsp;
 				</div>
 				<div class="col-6 center">
-					<?php
-		
-			//TODO get post ID code and pull name from Database
-			$post = $_POST;
-			
-			if ($post["InstrumentID"] == 0) {
-				echo 'Guitar Fretboard: ';
-			}
-			else
-				echo 'Cavaquinho Fretboard: ';
-			
-			if ($post["ScaleID"] == 0) {
-				echo 'Major Scale ';
-			}
-			else
-				echo 'Minor Scale ';
-		
-		
-		?>
+					<?php echo $instrumentName.' '. $scaleName.' Scale'; ?>
 					<br>
 					<hr>
 				</div>
@@ -92,17 +74,41 @@
 					<?php
 					
 						
-						//echo '<div line-height="10">Fretboard Map of:<br>';
-						//enter in variable instrument
-						//echo 'Guitar<br></div>';
 						
 						
 						//declare variables (to be replaced with Post from SQL Queries
-						$num_strings = 7;
-						$tuning = array(0, 4, 9, 2, 7, 11, 4);
+						$num_strings = 0;
+						foreach ($db->query("SELECT num_strings FROM instruments WHERE id = {$instrumentID}") as $row) {
+							$num_strings = $row['num_strings'];
+						}
+						
+						$tuning = array();
+						foreach ($db->query("SELECT s0, s1, s2, s3, s4, s5, s6, s7 FROM instruments WHERE id = {$instrumentID}") as $row) {
+							
+								$tuning[0] = $row['s0'];
+								$tuning[1] = $row['s1'];
+								$tuning[2] = $row['s2'];
+								$tuning[3] = $row['s3'];
+								$tuning[4] = $row['s4'];
+								$tuning[5] = $row['s5'];
+								$tuning[6] = $row['s6'];
+								$tuning[7] = $row['s7'];
+						}
 						
 						$tonic = $post["tonic"];
-						$intervals = array(0, 2, 2, 1, 2, 2, 2, 1);
+						
+						$intervals = array();
+						foreach ($db->query("SELECT i, ii, iii, iv, v, vi, vii FROM scales WHERE id = {$scaleID}") as $row) {
+							
+								$intervals[0] = $row['i'];
+								$intervals[1] = $row['ii'];
+								$intervals[2] = $row['iii'];
+								$intervals[3] = $row['iv'];
+								$intervals[4] = $row['v'];
+								$intervals[5] = $row['vi'];
+								$intervals[6] = $row['vii'];
+						}
+						
 						
 						
 						//open strings
