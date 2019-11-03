@@ -35,10 +35,10 @@
 					$instrumentID = $post['InstrumentID'];
 					$scaleID = $post['ScaleID'];
 					
-					$noteKey = array('C', 'C#/Db', 'D', 'D#/Eb', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B');
+					$noteKey = array('C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B');
 					
 					$noteName = $noteKey[$post["tonic"]];
-					$noteOther = $noteKey[0];
+				
 					
 					//$instrumentName = $db->query("SELECT name FROM instruments WHERE id = 2");
 					$instrumentName = '';
@@ -65,7 +65,7 @@
 				<div class="col-3">&nbsp;
 				</div>
 				<div class="col-6 center">
-					<?php echo $instrumentName.' '.$noteName.$noteOther.$post["tonic"].' '.$scaleName.' Scale'; ?>
+					<?php echo $instrumentName.' '.$noteName.' '.$scaleName.' Scale'; ?>
 					<br>
 					<hr>
 				</div>
