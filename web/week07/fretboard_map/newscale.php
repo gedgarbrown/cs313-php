@@ -68,7 +68,9 @@
 						die();
 					}
 					
-										
+					echo '<pre>';
+					print_r($_POST);
+					die();			
 									
 					$post =$_POST;
 					
@@ -87,7 +89,7 @@
 					$user_id = $_SESSION['user_id'];
 					
 					
-					$insInstSql = 'INSERT INTO scales(name, i,ii, iii, iv, v, vi, vii, standard, user_id) 
+					$insInstSql = 'INSERT INTO scales(name, i, ii, iii, iv, v, vi, vii, standard, user_id) 
 									VALUES(:name, :i, :ii, :iii, :iv, :v, :vi, :vii, :standard, :user_id)';
 									
 					$insInstPdo = $db->prepare($insInstSql);
