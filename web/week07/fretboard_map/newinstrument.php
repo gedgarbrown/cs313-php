@@ -94,8 +94,8 @@
 					*/
 					$insInstPdo->execute();
 						
-					//$newId = $insInstPdo->lastInsertId('instruments_id_seq');
-					$newId = 7;
+					$newId = $insInstPdo->lastInsertId('instruments_id_seq');
+					//$newId = 7;
 					echo $newId;
 					echo $s0;
 					
@@ -105,6 +105,8 @@
 					
 					$s0Pdo->bindValue(':s0', $s0);
 					$s0Pdo->bindValue(':id', $newId);
+					
+					$s0Pdo->execute();
 					
 					
 					echo 'Instrument Created!!<br><br>';								
