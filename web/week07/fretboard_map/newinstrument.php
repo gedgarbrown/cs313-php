@@ -98,6 +98,7 @@
 								
 					if ( $num_strings > 0) {
 						
+						echo 'working..<br>'
 						$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
 						$s0Pdo = $db->prepare($s0Sql);
 					
@@ -107,7 +108,7 @@
 					
 						$s0Pdo->execute();
 					}
-					
+					/*
 					if ( $num_strings > 1) {
 						$s1Sql = 'UPDATE instruments SET s1 = :s1 WHERE id = :id';
 						$s1Pdo = $db->prepare($s1Sql);
@@ -184,6 +185,7 @@
 					
 						$s7Pdo->execute();
 					}
+					*/
 					
 					echo 'Instrument Created!!<br><br>';								
 					echo '<form method="post" action="menu.php"><input type="submit" value="Menu"></form><br><br>';
