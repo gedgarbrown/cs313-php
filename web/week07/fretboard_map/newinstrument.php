@@ -119,7 +119,7 @@
 					
 						$s1Pdo->execute();
 					}
-					
+					/*
 					if ( $num_strings > 2) {
 						$s2Sql = 'UPDATE instruments SET s2 = :s2 WHERE id = :id';
 						$s2Pdo = $db->prepare($s2Sql);
@@ -185,7 +185,7 @@
 					
 						$s7Pdo->execute();
 					}
-					
+					*/
 					
 					echo 'Instrument Created!!<br><br>';								
 					echo '<form method="post" action="menu.php"><input type="submit" value="Menu"></form><br><br>';
