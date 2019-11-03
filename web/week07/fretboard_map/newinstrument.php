@@ -75,11 +75,13 @@
 					$s6 = $post['s6'];
 					$s7 = $post['s7'];
 					
-					$insInstSql = 'INSERT INTO instruments(name, num_strings) VALUES(:name, :num_strings)';
+					$insInstSql = 'INSERT INTO instruments(name, num_strings, standard) VALUES(:name, :num_strings, :standard)';
 					$insInstPdo = $db->prepare($insInstSql);
 					
 					$insInstPdo->bindValue(':name', $name);
 					$insInstPdo->bindValue(':num_strings', $num_strings);
+					$insInstPdo->bindValue(':standard', FALSE);
+					
 					
 					/*
 					$insInstPdo->bindValue(':s0', $s0);
