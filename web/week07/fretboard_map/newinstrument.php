@@ -114,7 +114,7 @@
 						$s1Pdo = $db->prepare($s1Sql);
 					
 					
-						$s1Pdo->bindValue(':s0', $s1);
+						$s1Pdo->bindValue(':s1', $s1);
 						$s1Pdo->bindValue(':id', $newId);
 					
 						$s1Pdo->execute();
