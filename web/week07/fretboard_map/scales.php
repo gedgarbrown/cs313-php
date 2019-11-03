@@ -5,26 +5,50 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="week5.css">
 	<script src="week5.js"></script>
-	<title>
-		<?php
+	<?php
 		
-			//TODO get post ID code and pull name from Database
+			
 			$post = $_POST;
 			
-			if ($post["InstrumentID"] == 0) {
-				echo 'Guitar Map: ';
-			}
-			else
-				echo 'Cavaquinho Fretboard Map: ';
-			
-			if ($post["ScaleID"] == 0) {
-				echo 'Major Scale ';
-			}
-			else
-				echo 'Minor Scale ';
+					try
+					{
+						$dbUrl = getenv('DATABASE_URL');
+
+						$dbOpts = parse_url($dbUrl);
+
+						$dbHost = $dbOpts["host"];
+						$dbPort = $dbOpts["port"];
+						$dbUser = $dbOpts["user"];
+						$dbPassword = $dbOpts["pass"];
+						$dbName = ltrim($dbOpts["path"],'/');
+
+						$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	
+						$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);				
+					}
+						catch (PDOException $ex)
+					{
+						echo 'Error!: ' . $ex->getMessage();
+						die();
+					}
+					
+					$instrumentID = $post['InstrumentID'];
+					$scaleID = $post['ScaleID'];
+					//$instrumentName = $db->query("SELECT name FROM instruments WHERE id = 2");
+					$instrumentName = '';
+					
+					foreach ($db->query("SELECT name FROM instruments WHERE id = {$instrumentID}") as $row) {
+						$instrumentName = $row['name'];
+					}
+					
+					foreach ($db->query("SELECT name FROM scales WHERE id = {$scaleID}") as $row) {
+						$scaleName = $row['name'];
+					}
 		
 		
 		?>
+	<title>
+		<?php echo $instrumentName.' '. $scaleName.' Scale';
 	</title>
 </head>
 <body>	

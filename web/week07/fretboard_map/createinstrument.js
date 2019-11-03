@@ -20,28 +20,3 @@ function submitNewInstrument() {
 	return true;
 }
 
-function hideStrings() {
-	
-	
-	var selector = document.getElementById("num_strings");
-	var num_strings = selector.options[selector.selectedIndex].value;
-	
-	for (x = 1; x < 8; x++) {
-		
-		var currentOption = "s" + String(x);
-		//alert(currentOption);
-		
-		if (x < num_strings) {
-			getElementById(currentOption).style.display = "inline";
-		}
-		else {
-			getElementById(currentOption).style.display = "none";
-		}
-		
-	}
-	
-	//document.getElementById("invalidName").innerHTML = num_strings;
-	
-	
-	
-}
