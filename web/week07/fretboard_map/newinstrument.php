@@ -22,6 +22,8 @@
 				}
 			}
 		?>
+		</span>
+	</div>	
 	<div id="main" class="main">
 		<div id="header" class="header">
 			Fretboard Mapper
