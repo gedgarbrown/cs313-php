@@ -66,14 +66,14 @@
 					
 					$name = $post['name'];
 					$num_strings = $post['num_strings'];
-					$s[0] = $post['s0'];
-					$s[1] = $post['s1'];
-					$s[2] = $post['s2'];
-					$s[3] = $post['s3'];
-					$s[4] = $post['s4'];
-					$s[5] = $post['s5'];
-					$s[6] = $post['s6'];
-					$s[7] = $post['s7'];
+					$s0 = $post['s0'];
+					$s1 = $post['s1'];
+					$s2 = $post['s2'];
+					$s3 = $post['s3'];
+					$s4 = $post['s4'];
+					$s5 = $post['s5'];
+					$s6 = $post['s6'];
+					$s7 = $post['s7'];
 					
 					$insInstSql = 'INSERT INTO instruments(name, num_strings) VALUES(:name, :num_strings)';
 					$insInstPdo = $db->prepare($insInstSql);
@@ -96,19 +96,92 @@
 						
 					$newId = $db->lastInsertId();
 					
-					for ($x = 0; $x < num_strings; x++) {
-						$index = 's'+ $x)
-						
-						echo $index.'<br>;
-						
-						/*
-						$s0Sql = 'UPDATE instruments SET {$index}  = :sx WHERE id = :id';
+					if ( num_string > 0) {
+						$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
 						$s0Pdo = $db->prepare($s0Sql);
-						
-						$s0Pdo->bindValue(':sx', $s[$x]);
+					
+					
+						$s0Pdo->bindValue(':s0', $s0);
 						$s0Pdo->bindValue(':id', $newId);
 					
-						$s0Pdo->execute(); */
+						$s0Pdo->execute();
+					}
+					
+					if ( num_string > 1) {
+						$s1Sql = 'UPDATE instruments SET s1 = :s1 WHERE id = :id';
+						$s1Pdo = $db->prepare($s1Sql);
+					
+					
+						$s1Pdo->bindValue(':s0', $s0);
+						$s1Pdo->bindValue(':id', $newId);
+					
+						$s1Pdo->execute();
+					}
+					
+					if ( num_string > 2) {
+						$s2Sql = 'UPDATE instruments SET s2 = :s2 WHERE id = :id';
+						$s2Pdo = $db->prepare($s0Sql);
+					
+					
+						$s2Pdo->bindValue(':s2', $s2);
+						$s2Pdo->bindValue(':id', $newId);
+					
+						$s2Pdo->execute();
+					}
+					
+					if ( num_string > 3) {
+						$s3Sql = 'UPDATE instruments SET s3 = :s3 WHERE id = :id';
+						$s3Pdo = $db->prepare($s3Sql);
+					
+					
+						$s3Pdo->bindValue(':s3', $s0);
+						$s3Pdo->bindValue(':id', $newId);
+					
+						$s3Pdo->execute();
+					}
+					
+					if ( num_string > 4) {
+						$s4Sql = 'UPDATE instruments SET s4 = :s4 WHERE id = :id';
+						$s4Pdo = $db->prepare($s0Sql);
+					
+					
+						$s4Pdo->bindValue(':s0', $s4);
+						$s4Pdo->bindValue(':id', $newId);
+					
+						$s4Pdo->execute();
+					}
+					
+					if ( num_string > 5) {
+						$s5Sql = 'UPDATE instruments SET s5 = :s5 WHERE id = :id';
+						$s5Pdo = $db->prepare($s5Sql);
+					
+					
+						$s5Pdo->bindValue(':s5', $s5);
+						$s5Pdo->bindValue(':id', $newId);
+					
+						$s5Pdo->execute();
+					}
+					
+					if ( num_string > 6) {
+						$s6Sql = 'UPDATE instruments SET s6 = :s6 WHERE id = :id';
+						$s6Pdo = $db->prepare($s0Sql);
+					
+					
+						$s0Pdo->bindValue(':s6', $s6);
+						$s0Pdo->bindValue(':id', $newId);
+					
+						$s6Pdo->execute();
+					}
+					
+					if ( num_string > 7) {
+						$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
+						$s0Pdo = $db->prepare($s7Sql);
+					
+					
+						$s7Pdo->bindValue(':s7', $s7);
+						$s7Pdo->bindValue(':id', $newId);
+					
+						$s7Pdo->execute();
 					}
 					
 					echo 'Instrument Created!!<br><br>';								
