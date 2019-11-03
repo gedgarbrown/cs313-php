@@ -56,13 +56,13 @@
 						Number of Strings: 
 						<select name="num_strings" id="num_strings" onchange="hideStrings()">
 							<option value="1">1</option>
-							<option value="1">2</option>
-							<option value="1">3</option>
-							<option value="1">4</option>
-							<option value="1">5</option>
-							<option value="1">6</option>
-							<option value="1">7</option>
-							<option value="1">8</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
 						</select>
 						<br>
 						Select tuning for each string:<br>
