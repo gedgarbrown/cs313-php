@@ -94,7 +94,7 @@
 					*/
 					$insInstPdo->execute();
 						
-					$newId = $insInstPdo->lastInsertId('instruments_id_seq');
+					$newId = $insInstPdo->lastInsertId();
 					//$newId = 7;
 					echo $newId;
 					echo $s0;
