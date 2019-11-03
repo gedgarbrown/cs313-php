@@ -95,7 +95,7 @@
 					$insInstPdo->execute();
 						
 					$newId = $db->lastInsertId();
-					echo 
+					
 					if ( $num_string > 0) {
 						$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
 						$s0Pdo = $db->prepare($s0Sql);
