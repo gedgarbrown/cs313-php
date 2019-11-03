@@ -48,7 +48,7 @@
 		
 		?>
 	<title>
-		<?php echo $instrumentName.' '. $scaleName.' Scale'; ?>
+		<?php echo $instrumentName.' '.$post['tonic'].' '.$scaleName.' Scale'; ?>
 	</title>
 </head>
 <body>	
@@ -59,7 +59,7 @@
 				<div class="col-3">&nbsp;
 				</div>
 				<div class="col-6 center">
-					<?php echo $instrumentName.' '. $scaleName.' Scale'; ?>
+					<?php echo $instrumentName.' '.$post['tonic'].' '.$scaleName.' Scale'; ?>
 					<br>
 					<hr>
 				</div>
