@@ -92,9 +92,9 @@
 					$insInstPdo->bindValue(':s7', $s7);
 					
 					*/
-					//$insInstPdo->execute();
+					$insInstPdo->execute();
 						
-					//$newId = $db->lastInsertId();
+					$newId = $db->lastInsertId();
 								
 					if ($num_strings > 0) {
 						
