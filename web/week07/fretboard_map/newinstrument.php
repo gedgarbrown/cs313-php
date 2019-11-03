@@ -83,7 +83,7 @@
 					$s6 = $post['s6'];
 					$s7 = $post['s7'];
 					$standard = 'f';
-					$user_id = $_SESSION('userID');
+				
 					
 					
 					
@@ -95,7 +95,7 @@
 					$insInstPdo->bindValue(':name', $name);
 					$insInstPdo->bindValue(':num_strings', $num_strings);
 					$insInstPdo->bindValue(':standard', $standard);
-					$insInstPdo->bindValue(':user_id', $user_id);
+					$insInstPdo->bindValue(':user_id', $_SESSION('userID'));
 					
 					/*
 					$insInstPdo->bindValue(':s0', $s0);
