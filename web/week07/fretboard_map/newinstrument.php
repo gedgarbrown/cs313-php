@@ -97,7 +97,9 @@
 					$newId = $db->lastInsertId();
 					
 					for ($x = 0; $x < num_strings; x++) {
-						$s0Sql = 'UPDATE instruments SET s'.$x.' = :sx WHERE id = :id';
+						$index = 's'.($x);
+						
+						$s0Sql = 'UPDATE instruments SET {$index}  = :sx WHERE id = :id';
 						$s0Pdo = $db->prepare($s0Sql);
 						
 						$s0Pdo->bindValue(':sx', $s[$x]);
