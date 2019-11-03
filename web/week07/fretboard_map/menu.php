@@ -190,6 +190,7 @@
 				<div class="col-3">&nbsp;
 				</div>
 				<div class="col-6">
+				<!--
 				<form method="post" target="_blank" action="chords.php">
 					Chord Map<br><hr>
 					Instrument: 
@@ -210,6 +211,7 @@
 					
 						?>
 					</select><br>
+					
 					Chord: 
 					<select name="ChordID">
 						<?php
@@ -247,10 +249,12 @@
 					<br>
 					<input type="submit" value="Create Map">
 				</form>	
+	
 				<form method="post" action="createchord.php">
 					<input type="submit" class="edit_submit" value="Create New Chord">
 				</form> 
 				<br><hr><hr><br>
+				-->
 				</div>
 				<div class="col-3">&nbsp;
 				</div>
