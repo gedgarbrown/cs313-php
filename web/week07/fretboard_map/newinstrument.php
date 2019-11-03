@@ -110,6 +110,7 @@
 					}
 					
 					if ( $num_strings > 1) {
+						echo 'putting in string 1';
 						$s1Sql = 'UPDATE instruments SET s1 = :s1 WHERE id = :id';
 						$s1Pdo = $db->prepare($s1Sql);
 					
