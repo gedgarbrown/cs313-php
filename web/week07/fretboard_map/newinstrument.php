@@ -94,7 +94,7 @@
 					*/
 					$insInstPdo->execute();
 						
-					$newId = $insInstPdo->lastInsertId();
+					$newId = $db->lastInsertId();
 					//$newId = 7;
 					echo $newId;
 					echo $s0;
