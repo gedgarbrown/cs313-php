@@ -95,8 +95,9 @@
 					$insInstPdo->execute();
 						
 					$newId = $db->lastInsertId();
-					
-					if ( $num_string > 0) {
+								
+					if ( $num_strings > 0) {
+						
 						$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
 						$s0Pdo = $db->prepare($s0Sql);
 					
@@ -107,7 +108,7 @@
 						$s0Pdo->execute();
 					}
 					
-					if ( $num_string > 1) {
+					if ( $num_strings > 1) {
 						$s1Sql = 'UPDATE instruments SET s1 = :s1 WHERE id = :id';
 						$s1Pdo = $db->prepare($s1Sql);
 					
@@ -118,7 +119,7 @@
 						$s1Pdo->execute();
 					}
 					
-					if ( $num_string > 2) {
+					if ( $num_strings > 2) {
 						$s2Sql = 'UPDATE instruments SET s2 = :s2 WHERE id = :id';
 						$s2Pdo = $db->prepare($s0Sql);
 					
@@ -129,7 +130,7 @@
 						$s2Pdo->execute();
 					}
 					
-					if ( $num_string > 3) {
+					if ( $num_strings > 3) {
 						$s3Sql = 'UPDATE instruments SET s3 = :s3 WHERE id = :id';
 						$s3Pdo = $db->prepare($s3Sql);
 					
@@ -140,7 +141,7 @@
 						$s3Pdo->execute();
 					}
 					
-					if ( $num_string > 4) {
+					if ( $num_strings > 4) {
 						$s4Sql = 'UPDATE instruments SET s4 = :s4 WHERE id = :id';
 						$s4Pdo = $db->prepare($s0Sql);
 					
@@ -151,7 +152,7 @@
 						$s4Pdo->execute();
 					}
 					
-					if ( $num_string > 5) {
+					if ( $num_strings > 5) {
 						$s5Sql = 'UPDATE instruments SET s5 = :s5 WHERE id = :id';
 						$s5Pdo = $db->prepare($s5Sql);
 					
@@ -162,7 +163,7 @@
 						$s5Pdo->execute();
 					}
 					
-					if ( $num_string > 6) {
+					if ( $num_strings > 6) {
 						$s6Sql = 'UPDATE instruments SET s6 = :s6 WHERE id = :id';
 						$s6Pdo = $db->prepare($s0Sql);
 					
@@ -173,7 +174,7 @@
 						$s6Pdo->execute();
 					}
 					
-					if ( $num_string > 7) {
+					if ( $num_strings > 7) {
 						$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
 						$s0Pdo = $db->prepare($s7Sql);
 					
