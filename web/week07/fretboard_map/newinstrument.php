@@ -92,21 +92,21 @@
 					$insInstPdo->bindValue(':s7', $s7);
 					
 					*/
-					$insInstPdo->execute();
+					//$insInstPdo->execute();
 						
-					$newId = $db->lastInsertId();
+					//$newId = $db->lastInsertId();
 								
 					if ($num_strings > 0) {
 						
-						echo 'working..<br>'
-						//$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
-						//$s0Pdo = $db->prepare($s0Sql);
+						echo 'working..<br>';
+						$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
+						$s0Pdo = $db->prepare($s0Sql);
 					
 					
-						//$s0Pdo->bindValue(':s0', $s0);
-						//$s0Pdo->bindValue(':id', $newId);
+						$s0Pdo->bindValue(':s0', $s0);
+						$s0Pdo->bindValue(':id', $newId);
 					
-						//$s0Pdo->execute();
+						$s0Pdo->execute();
 					}
 					/*
 					if ( $num_strings > 1) {
