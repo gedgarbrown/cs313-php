@@ -95,11 +95,13 @@
 						
 					$newId = $insInstpdo->lastInsertId('instruments_id_seq');
 					
-					$insInstSql = 'UPDATE instruments'.'SET  s0 = :s0'.'WHERE id = :id';
-					$insInstPdo = $db->prepare($insInstSql);
+					echo $newId;
 					
-					$insInstPdo->bindValue(':s0', $s0);
-					$insInstPdo->bindValue(':id', $newId);
+					$s0Sql = 'UPDATE instruments'.'SET  s0 = :s0'.'WHERE id = :id';
+					$s0Pdo = $db->prepare($insInstSql);
+					
+					$s0Pdo->bindValue(':s0', $s0);
+					$s0Pdo->bindValue(':id', $newId);
 					
 					
 					echo 'Instrument Created!!<br><br>';								
