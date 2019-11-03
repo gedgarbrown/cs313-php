@@ -66,14 +66,14 @@
 					
 					$name = $post['name'];
 					$num_strings = $post['num_strings'];
-					$s0 = $post['s0'];
-					$s1 = $post['s1'];
-					$s2 = $post['s2'];
-					$s3 = $post['s3'];
-					$s4 = $post['s4'];
-					$s5 = $post['s5'];
-					$s6 = $post['s6'];
-					$s7 = $post['s7'];
+					$s[0] = $post['s0'];
+					$s[1] = $post['s1'];
+					$s[2] = $post['s2'];
+					$s[3] = $post['s3'];
+					$s[4] = $post['s4'];
+					$s[5] = $post['s5'];
+					$s[6] = $post['s6'];
+					$s[7] = $post['s7'];
 					
 					$insInstSql = 'INSERT INTO instruments(name, num_strings) VALUES(:name, :num_strings)';
 					$insInstPdo = $db->prepare($insInstSql);
@@ -95,19 +95,16 @@
 					$insInstPdo->execute();
 						
 					$newId = $db->lastInsertId();
-					//$newId = 7;
-					echo $newId;
-					echo $s0;
 					
-					$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
-					$s0Pdo = $db->prepare($s0Sql);
+					for ($x = 0; $x < num_strings; x++) {
+						$s0Sql = 'UPDATE instruments SET s'.$x.' = :sx WHERE id = :id';
+						$s0Pdo = $db->prepare($s0Sql);
+						
+						$s0Pdo->bindValue(':sx', $s[$x]);
+						$s0Pdo->bindValue(':id', $newId);
 					
-					
-					$s0Pdo->bindValue(':s0', $s0);
-					$s0Pdo->bindValue(':id', $newId);
-					
-					$s0Pdo->execute();
-					
+						$s0Pdo->execute();
+					}
 					
 					echo 'Instrument Created!!<br><br>';								
 					echo '<form method="post" action="menu.php"><input type="submit" value="Menu"></form><br><br>';
