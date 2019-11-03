@@ -97,15 +97,18 @@
 					$newId = $db->lastInsertId();
 					
 					for ($x = 0; $x < num_strings; x++) {
-						$index = 's'.($x);
+						$index = 's'+ stringval($x);
 						
+						echo $index.'<br>;
+						
+						/*
 						$s0Sql = 'UPDATE instruments SET {$index}  = :sx WHERE id = :id';
 						$s0Pdo = $db->prepare($s0Sql);
 						
 						$s0Pdo->bindValue(':sx', $s[$x]);
 						$s0Pdo->bindValue(':id', $newId);
 					
-						$s0Pdo->execute();
+						$s0Pdo->execute(); */
 					}
 					
 					echo 'Instrument Created!!<br><br>';								
