@@ -74,141 +74,46 @@
 					
 					$name = $post['name'];
 					$num_strings = $post['num_strings'];
-					$s0 = $post['s0'];
-					$s1 = $post['s1'];
-					$s2 = $post['s2'];
-					$s3 = $post['s3'];
-					$s4 = $post['s4'];
-					$s5 = $post['s5'];
-					$s6 = $post['s6'];
-					$s7 = $post['s7'];
+					$i = $post['i'];
+					$ii = $post['ii'];
+					$iii = $post['iii'];
+					$iv = $post['iv'];
+					$v = $post['v'];
+					$vi = $post['vi'];
+					$vii = $post['vii'];
+					
 					$standard = 'f';
 				
 					$user_id = $_SESSION['user_id'];
 					
 					
-					$insInstSql = 'INSERT INTO instruments(name, num_strings, standard, user_id) 
-									VALUES(:name, :num_strings, :standard, :user_id)';
+					$insInstSql = 'INSERT INTO instruments(name, i,ii, iii, iv, v, vi, vii, standard, user_id) 
+									VALUES(:name, :i, :ii, :iii, :iv, :v, :vi, :vii, :standard, :user_id)';
 									
 					$insInstPdo = $db->prepare($insInstSql);
 					
 					$insInstPdo->bindValue(':name', $name);
-					$insInstPdo->bindValue(':num_strings', $num_strings);
 					$insInstPdo->bindValue(':standard', $standard);
 					$insInstPdo->bindValue(':user_id', $user_id);
 					
-					/*
-					$insInstPdo->bindValue(':s0', $s0);
-					$insInstPdo->bindValue(':s1', $s1);
-					$insInstPdo->bindValue(':s2', $s2);
-					$insInstPdo->bindValue(':s3', $s3);
-					$insInstPdo->bindValue(':s4', $s4);
-					$insInstPdo->bindValue(':s5', $s5);
-					$insInstPdo->bindValue(':s6', $s6);
-					$insInstPdo->bindValue(':s7', $s7);
 					
-					*/
+					$insInstPdo->bindValue(':i', $i);
+					$insInstPdo->bindValue(':ii', $ii);
+					$insInstPdo->bindValue(':iii', $iii);
+					$insInstPdo->bindValue(':iv', $iv);
+					$insInstPdo->bindValue(':v', $v);
+					$insInstPdo->bindValue(':vi', $vi);
+					$insInstPdo->bindValue(':vii', $vii);
+					
+					
 					$insInstPdo->execute();
 						
-					$newId = $db->lastInsertId();
-								
-					if ($num_strings > 0) {
-						
-						
-						$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
-						$s0Pdo = $db->prepare($s0Sql);
 					
 					
-						$s0Pdo->bindValue(':s0', $s0);
-						$s0Pdo->bindValue(':id', $newId);
 					
-						$s0Pdo->execute();
-					}
-					
-					if ( $num_strings > 1) {
-						
-						$s1Sql = 'UPDATE instruments SET s1 = :s1 WHERE id = :id';
-						$s1Pdo = $db->prepare($s1Sql);
-					
-					
-						$s1Pdo->bindValue(':s1', $s1);
-						$s1Pdo->bindValue(':id', $newId);
-					
-						$s1Pdo->execute();
-					}
-					
-					if ( $num_strings > 2) {
-						$s2Sql = 'UPDATE instruments SET s2 = :s2 WHERE id = :id';
-						$s2Pdo = $db->prepare($s2Sql);
-					
-					
-						$s2Pdo->bindValue(':s2', $s2);
-						$s2Pdo->bindValue(':id', $newId);
-					
-						$s2Pdo->execute();
-					}
-					
-					if ( $num_strings > 3) {
-						$s3Sql = 'UPDATE instruments SET s3 = :s3 WHERE id = :id';
-						$s3Pdo = $db->prepare($s3Sql);
-					
-					
-						$s3Pdo->bindValue(':s3', $s3);
-						$s3Pdo->bindValue(':id', $newId);
-					
-						$s3Pdo->execute();
-					}
-					
-					
-					if ( $num_strings > 4) {
-						
-						$s4Sql = 'UPDATE instruments SET s4 = :s4 WHERE id = :id';
-						$s4Pdo = $db->prepare($s4Sql);
-					
-					
-						$s4Pdo->bindValue(':s4', $s4);
-						$s4Pdo->bindValue(':id', $newId);
-					
-						$s4Pdo->execute();
-					}
-					
-					if ( $num_strings > 5) {
-						$s5Sql = 'UPDATE instruments SET s5 = :s5 WHERE id = :id';
-						$s5Pdo = $db->prepare($s5Sql);
-					
-					
-						$s5Pdo->bindValue(':s5', $s5);
-						$s5Pdo->bindValue(':id', $newId);
-					
-						$s5Pdo->execute();
-					}
-					
-					if ( $num_strings > 6) {
-						$s6Sql = 'UPDATE instruments SET s6 = :s6 WHERE id = :id';
-						$s6Pdo = $db->prepare($s6Sql);
-					
-					
-						$s6Pdo->bindValue(':s6', $s6);
-						$s6Pdo->bindValue(':id', $newId);
-					
-						$s6Pdo->execute();
-					}
-					
-					if ( $num_strings > 7) {
-						$s7Sql = 'UPDATE instruments SET s7 = :s7 WHERE id = :id';
-						$s7Pdo = $db->prepare($s7Sql);
-					
-					
-						$s7Pdo->bindValue(':s7', $s7);
-						$s7Pdo->bindValue(':id', $newId);
-					
-						$s7Pdo->execute();
-					}
-					
-					
-					echo 'Instrument Created!!<br><br>';								
+					echo 'Instrument Scale!!<br><br>';								
 					echo '<form method="post" action="menu.php"><input type="submit" value="Menu"></form><br><br>';
-					echo '<form method="post" action="createinstrument.php"><input type="submit" value="Create Another Instrument"></form><br><br>';
+					echo '<form method="post" action="createscale.php"><input type="submit" value="Create Another Scale"></form><br><br>';
 						
 					?>
 				</div>
