@@ -18,7 +18,7 @@
 				if ($_SESSION["loggedIn"] == true) {
 					echo 'Logged in as:<br>'.$_SESSION["username"].'<br>';
 					echo '<a href="index.php">Log Out</a>';
-					//echo $_SESSION["user_id"];
+					echo $_SESSION['user_id'];
 				}
 			}
 		?>
@@ -83,7 +83,7 @@
 					$s6 = $post['s6'];
 					$s7 = $post['s7'];
 					$standard = 'f';
-					$user_id = $_SESSION("userID");
+					$user_id = $_SESSION('userID');
 					
 					
 					
