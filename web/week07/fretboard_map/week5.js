@@ -188,3 +188,8 @@ function loadCreateInstrument() {
 	
 	document.newInstrument.name.focus();
 }
+
+function loadCreateScale() {
+	
+	document.newInstrument.scalename.focus();
+}
