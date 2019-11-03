@@ -84,7 +84,7 @@
 					$s7 = $post['s7'];
 					$standard = 'f';
 				
-					
+					$user_id = $_SESSION['user_id'];
 					
 					
 					$insInstSql = 'INSERT INTO instruments(name, num_strings, standard, user_id) 
@@ -95,7 +95,7 @@
 					$insInstPdo->bindValue(':name', $name);
 					$insInstPdo->bindValue(':num_strings', $num_strings);
 					$insInstPdo->bindValue(':standard', $standard);
-					$insInstPdo->bindValue(':user_id', $_SESSION('userID'));
+					$insInstPdo->bindValue(':user_id', $user_id);
 					
 					/*
 					$insInstPdo->bindValue(':s0', $s0);
