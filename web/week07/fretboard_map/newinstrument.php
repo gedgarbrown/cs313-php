@@ -98,7 +98,7 @@
 								
 					if ($num_strings > 0) {
 						
-						echo 'working..<br>';
+						
 						$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
 						$s0Pdo = $db->prepare($s0Sql);
 					
@@ -108,13 +108,13 @@
 					
 						$s0Pdo->execute();
 					}
-					/*
+					
 					if ( $num_strings > 1) {
 						$s1Sql = 'UPDATE instruments SET s1 = :s1 WHERE id = :id';
 						$s1Pdo = $db->prepare($s1Sql);
 					
 					
-						$s1Pdo->bindValue(':s0', $s0);
+						$s1Pdo->bindValue(':s0', $s1);
 						$s1Pdo->bindValue(':id', $newId);
 					
 						$s1Pdo->execute();
@@ -122,7 +122,7 @@
 					
 					if ( $num_strings > 2) {
 						$s2Sql = 'UPDATE instruments SET s2 = :s2 WHERE id = :id';
-						$s2Pdo = $db->prepare($s0Sql);
+						$s2Pdo = $db->prepare($s2Sql);
 					
 					
 						$s2Pdo->bindValue(':s2', $s2);
@@ -136,7 +136,7 @@
 						$s3Pdo = $db->prepare($s3Sql);
 					
 					
-						$s3Pdo->bindValue(':s3', $s0);
+						$s3Pdo->bindValue(':s3', $s3);
 						$s3Pdo->bindValue(':id', $newId);
 					
 						$s3Pdo->execute();
@@ -144,7 +144,7 @@
 					
 					if ( $num_strings > 4) {
 						$s4Sql = 'UPDATE instruments SET s4 = :s4 WHERE id = :id';
-						$s4Pdo = $db->prepare($s0Sql);
+						$s4Pdo = $db->prepare($s4Sql);
 					
 					
 						$s4Pdo->bindValue(':s0', $s4);
@@ -166,7 +166,7 @@
 					
 					if ( $num_strings > 6) {
 						$s6Sql = 'UPDATE instruments SET s6 = :s6 WHERE id = :id';
-						$s6Pdo = $db->prepare($s0Sql);
+						$s6Pdo = $db->prepare($s6Sql);
 					
 					
 						$s0Pdo->bindValue(':s6', $s6);
@@ -185,7 +185,7 @@
 					
 						$s7Pdo->execute();
 					}
-					*/
+					
 					
 					echo 'Instrument Created!!<br><br>';								
 					echo '<form method="post" action="menu.php"><input type="submit" value="Menu"></form><br><br>';
