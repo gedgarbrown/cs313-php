@@ -97,7 +97,7 @@
 					$newId = $db->lastInsertId();
 					
 					for ($x = 0; $x < num_strings; x++) {
-						$index = 's'+ stringval($x);
+						$index = 's'+ $x)
 						
 						echo $index.'<br>;
 						
