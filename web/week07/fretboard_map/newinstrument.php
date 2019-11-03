@@ -172,15 +172,15 @@
 						$s6Pdo = $db->prepare($s6Sql);
 					
 					
-						$s0Pdo->bindValue(':s6', $s6);
-						$s0Pdo->bindValue(':id', $newId);
+						$s6Pdo->bindValue(':s6', $s6);
+						$s6Pdo->bindValue(':id', $newId);
 					
 						$s6Pdo->execute();
 					}
 					
 					if ( $num_strings > 7) {
-						$s0Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
-						$s0Pdo = $db->prepare($s7Sql);
+						$s7Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
+						$s7Pdo = $db->prepare($s7Sql);
 					
 					
 						$s7Pdo->bindValue(':s7', $s7);
