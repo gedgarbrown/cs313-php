@@ -179,7 +179,7 @@
 					}
 					
 					if ( $num_strings > 7) {
-						$s7Sql = 'UPDATE instruments SET s0 = :s0 WHERE id = :id';
+						$s7Sql = 'UPDATE instruments SET s7 = :s7 WHERE id = :id';
 						$s7Pdo = $db->prepare($s7Sql);
 					
 					
