@@ -49,17 +49,14 @@ function submitNewScale() {
 	vi = document.getElementById("i");
 	vii = document.getElementById("i");
 	
-	if (options.[i.selectedIndex].value == 1 || options.[i.selectedIndex].value == 2){
-		if (options.[ii.selectedIndex].value == 1 || options.[ii.selectedIndex].value == 2){
-			if (options.[iii.selectedIndex].value == 1 || options.[iii.selectedIndex].value == 2){
-				if (options.[iv.selectedIndex].value == 1 || options.[iv.selectedIndex].value == 2){
-					if (options.[v.selectedIndex].value == 1 || options.[v.selectedIndex].value == 2){
-						if (options.[v.selectedIndex].value == 1 || options.[v.selectedIndex].value == 2){
-							if (options.[vi.selectedIndex].value == 1 || options.[vi.selectedIndex].value == 2){
-								if (options.[vii.selectedIndex].value == 1 || options.[vii.selectedIndex].value == 2){
+	if (i.options.[i.selectedIndex].value == 1 || i.options.[i.selectedIndex].value == 2){
+		if (ii.options.[ii.selectedIndex].value == 1 || ii.options.[ii.selectedIndex].value == 2){
+			if (iii.options.[iii.selectedIndex].value == 1 || iii.options.[iii.selectedIndex].value == 2){
+				if (iv.options.[iv.selectedIndex].value == 1 || iv.options.[iv.selectedIndex].value == 2){
+					if (v.options.[v.selectedIndex].value == 1 || v.options.[v.selectedIndex].value == 2){
+						if (vi.options.[vi.selectedIndex].value == 1 || vi.options.[vi.selectedIndex].value == 2){
+							if (vii.options.[vii.selectedIndex].value == 1 || vii.options.[vii.selectedIndex].value == 2){
 									return = true;
-		
-								}
 		
 							}
 		

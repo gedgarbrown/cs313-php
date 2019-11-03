@@ -68,9 +68,9 @@
 						die();
 					}
 					
-					echo '<pre>';
-					print_r($_POST);
-					die();			
+					//echo '<pre>';
+					//print_r($_POST);
+					//die();			
 									
 					$post =$_POST;
 					
@@ -86,7 +86,7 @@
 					
 					$standard = 'f';
 				
-					$user_id = $_SESSION['user_id'];
+					$user_id = $_SESSION['userID'];
 					
 					
 					$insInstSql = 'INSERT INTO scales(name, i, ii, iii, iv, v, vi, vii, standard, user_id) 

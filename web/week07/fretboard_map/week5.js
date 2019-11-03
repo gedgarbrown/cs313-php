@@ -191,5 +191,5 @@ function loadCreateInstrument() {
 
 function loadCreateScale() {
 	
-	document.newInstrument.scalename.focus();
+	document.newScale.scalename.focus();
 }
