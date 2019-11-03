@@ -90,7 +90,7 @@
 				</div>
 				<div class="col-6 center fretboard">
 					<?php
-						$post = $_POST;
+					
 						
 						//echo '<div line-height="10">Fretboard Map of:<br>';
 						//enter in variable instrument
