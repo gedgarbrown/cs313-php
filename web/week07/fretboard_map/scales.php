@@ -48,7 +48,7 @@
 		
 		?>
 	<title>
-		<?php echo $instrumentName.' '. $scaleName.' Scale';
+		<?php echo $instrumentName.' '. $scaleName.' Scale'; ?>
 	</title>
 </head>
 <body>	
