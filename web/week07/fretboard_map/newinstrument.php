@@ -110,7 +110,7 @@
 					}
 					
 					if ( $num_strings > 1) {
-						echo 'putting in string 1';
+						
 						$s1Sql = 'UPDATE instruments SET s1 = :s1 WHERE id = :id';
 						$s1Pdo = $db->prepare($s1Sql);
 					
@@ -143,12 +143,14 @@
 						$s3Pdo->execute();
 					}
 					
+					
 					if ( $num_strings > 4) {
+						
 						$s4Sql = 'UPDATE instruments SET s4 = :s4 WHERE id = :id';
 						$s4Pdo = $db->prepare($s4Sql);
 					
 					
-						$s4Pdo->bindValue(':s0', $s4);
+						$s4Pdo->bindValue(':s4', $s4);
 						$s4Pdo->bindValue(':id', $newId);
 					
 						$s4Pdo->execute();
