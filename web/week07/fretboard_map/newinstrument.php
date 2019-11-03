@@ -83,9 +83,9 @@
 					$s6 = $post['s6'];
 					$s7 = $post['s7'];
 					$standard = 'f';
-					//$user_id = $_SESSION("userID");
+					$user_id = $_SESSION("userID");
 					
-					$user_id = 2;
+					
 					
 					$insInstSql = 'INSERT INTO instruments(name, num_strings, standard, user_id) 
 									VALUES(:name, :num_strings, :standard, :user_id)';
