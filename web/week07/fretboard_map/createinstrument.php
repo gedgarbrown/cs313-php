@@ -54,7 +54,7 @@
 						Name: <input type="text" name="name" size="20" onblur="nameValid()">
 						<span class="error" id="invalidName"></span><br>
 						Number of Strings: 
-						<select name="num_strings" id="num_strings" onchange="hideStrings()">
+						<select name="num_strings" id="num_strings">
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>

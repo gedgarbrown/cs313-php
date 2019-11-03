@@ -175,7 +175,7 @@
 					<br>
 					<input type="submit" value="Create Map">
 				</form>	
-				<form method="post" action="create_scale.php">
+				<form method="post" action="createscale.php">
 					<input type="submit" class="edit_submit" value="Create New Scale">
 				</form> 
 				<br><hr><hr><br>
