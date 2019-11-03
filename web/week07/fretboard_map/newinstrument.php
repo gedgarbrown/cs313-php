@@ -77,6 +77,8 @@
 					$standard = 'f';
 					$user_id = $_SESSION("userID");
 					
+					echo $user_id;
+					
 					$insInstSql = 'INSERT INTO instruments(name, num_strings, standard, user_id) 
 									VALUES(:name, :num_strings, :standard, :user_id)';
 									
