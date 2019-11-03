@@ -12,10 +12,16 @@
 </head>
 <body>	
 	<div id="mySidenav" class="sidenav">
-		<a href="index.php">Login</a>
-		
-
-	</div>	
+		<span class="sidetext">
+		<?php
+			if (isset($_SESSION["loggedIn"]) || isset($_SESSION["username"])) {
+				if ($_SESSION["loggedIn"] == true) {
+					echo 'Logged in as:<br>'.$_SESSION["username"].'<br>';
+					echo '<a href="index.php">Log Out</a>';
+					//echo $_SESSION["user_id"];
+				}
+			}
+		?>
 	<div id="main" class="main">
 		<div id="header" class="header">
 			Fretboard Mapper
@@ -75,9 +81,9 @@
 					$s6 = $post['s6'];
 					$s7 = $post['s7'];
 					$standard = 'f';
-					$user_id = $_SESSION("userID");
+					//$user_id = $_SESSION("userID");
 					
-					echo $user_id;
+					$user_id = 2;
 					
 					$insInstSql = 'INSERT INTO instruments(name, num_strings, standard, user_id) 
 									VALUES(:name, :num_strings, :standard, :user_id)';
