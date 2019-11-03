@@ -74,7 +74,7 @@
 									
 					$post =$_POST;
 					
-					$name = $post['name'];
+					$name = $post['scalename'];
 					$num_strings = $post['num_strings'];
 					$i = $post['i'];
 					$ii = $post['ii'];
