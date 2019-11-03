@@ -101,18 +101,19 @@
 								$tuning[7] = $row['s7'];
 						}
 						
-						$tonic = $post["tonic"] - 2;
+						$tonic = $post["tonic"];
 						
 						$intervals = array();
 						foreach ($db->query("SELECT i, ii, iii, iv, v, vi, vii FROM scales WHERE id = {$scaleID}") as $row) {
-							
-								$intervals[0] = $row['i'];
-								$intervals[1] = $row['ii'];
-								$intervals[2] = $row['iii'];
-								$intervals[3] = $row['iv'];
-								$intervals[4] = $row['v'];
-								$intervals[5] = $row['vi'];
-								$intervals[6] = $row['vii'];
+								
+								$intervals[0] = 0;
+								$intervals[1] = $row['i'];
+								$intervals[2] = $row['ii'];
+								$intervals[3] = $row['iii'];
+								$intervals[4] = $row['iv'];
+								$intervals[5] = $row['v'];
+								$intervals[6] = $row['vi'];
+								$intervals[7] = $row['vii'];
 						}
 						
 						
