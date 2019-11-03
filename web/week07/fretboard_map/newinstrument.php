@@ -74,7 +74,7 @@
 					$s5 = $post['s5'];
 					$s6 = $post['s6'];
 					$s7 = $post['s7'];
-					$standard = FALSE;
+					$standard = 'f';
 					$insInstSql = 'INSERT INTO instruments(name, num_strings, standard) VALUES(:name, :num_strings, :standard)';
 					$insInstPdo = $db->prepare($insInstSql);
 					
